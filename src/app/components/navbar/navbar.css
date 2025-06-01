@@ -34,3 +34,50 @@ nav a:hover {
 .ml-10px{
   margin-left: 10px;
 }
+
+.dropdown-language {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-language button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dropdown-language ul {
+  display: none;
+  position: absolute;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  top: 100%;
+  left: 0;
+  width: max-content;
+  border: 1px solid #444;
+  z-index: 1000;
+}
+
+.dropdown-language ul.show {
+  display: block;
+}
+
+.dropdown-language li {
+  padding: 8px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.dropdown-language li:hover {
+  background-color: #222;
+}
