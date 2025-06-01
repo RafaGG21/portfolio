@@ -1,11 +1,14 @@
+
 <div class="about-container" [ngClass]="{ 'fade-in': animate }">
   <img src="../../../assets/pictures/foto-perfil.jpg" alt="Foto de perfil" class="profile-img" />
 
-  <div class="about-text">
+  <div class="about-text" [class.visible]="animate">
     <h2>{{ 'ABOUT_ME' | translate}}</h2>
     <p>
+
       {{ 'DESCRIPTION' | translate}}
     </p>
+
   </div>
 </div>
 

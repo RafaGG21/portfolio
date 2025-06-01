@@ -1,49 +1,52 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router, NavigationStart, NavigationEnd, NavigationCancel, NavigationError } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
-  standalone: false,
-  styleUrl: './app.css'
+  styleUrl: './app.css',
+  standalone: false
 })
-export class App {
+export class App implements OnInit {
   protected title = 'portfolio';
-  isDarkMode: boolean = false;
-  onDarkModeChange(isDark: boolean) {
-    this.isDarkMode = isDark;
-
-    if (this.isDarkMode) {
-      document.body.classList.add('dark-mode');
-      document.body.classList.remove('light-mode');
-    } else {
-      document.body.classList.add('light-mode');
-      document.body.classList.remove('dark-mode');
-    }
-  }
-  loading = true;
-
-
+  isDarkMode = false;
   darkMode = false;
   dropdownOpen = false;
   opened = false;
+
+  loading = false;
+
   selectedLanguage = 'es';
-
-
   languages = [
     { code: 'es', name: 'Español', flag: 'assets/flags/es.png' },
     { code: 'en', name: 'English', flag: 'assets/flags/uk.png' },
     { code: 'fr', name: 'Français', flag: 'assets/flags/fr.png' }
   ];
 
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService, private router: Router) {
     translate.setDefaultLang(this.selectedLanguage);
     translate.use(this.selectedLanguage);
   }
 
   ngOnInit(): void {
-    setTimeout(() => {
-      this.loading = false;
-    }, 1000); // Simula carga inicial
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationStart) {
+        this.loading = true;
+      } else if (
+        event instanceof NavigationEnd ||
+        event instanceof NavigationCancel ||
+        event instanceof NavigationError
+      ) {
+        setTimeout(() => {
+          this.loading = false;
+        }, 1000); // 1 segundo de duración visible
+      }
+    });
+
+    // Simula carga inicial
+    this.loading = true;
+    setTimeout(() => this.loading = false, 1000);
   }
 
   toggleDarkMode() {
@@ -63,5 +66,16 @@ export class App {
   getLanguageName(code: string): string {
     const lang = this.languages.find(l => l.code === code);
     return lang ? lang.name : code;
+  }
+
+  onDarkModeChange(isDark: boolean) {
+    this.isDarkMode = isDark;
+    if (isDark) {
+      document.body.classList.add('dark-mode');
+      document.body.classList.remove('light-mode');
+    } else {
+      document.body.classList.add('light-mode');
+      document.body.classList.remove('dark-mode');
+    }
   }
 }

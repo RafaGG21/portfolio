@@ -11,3 +11,6 @@ body.light-mode {
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+.mdc-linear-progress__bar-inner{
+  color: #4caf50 !important;
+}

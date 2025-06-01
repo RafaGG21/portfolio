@@ -37,9 +37,12 @@
 
     <!-- SPINNER o CONTENIDO -->
     <ng-container *ngIf="loading; else content">
-      <div class="spinner-container">
-        <mat-spinner color="primary"></mat-spinner>
-      </div>
+      <mat-progress-bar
+      mode="indeterminate"
+      color="primary"
+      class="green-progress-bar">
+    </mat-progress-bar>
+
     </ng-container>
 
     <ng-template #content>
@@ -47,4 +50,5 @@
     </ng-template>
 
   </mat-sidenav-content>
+
 </mat-sidenav-container>

@@ -20,6 +20,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 import { Contact } from './pages/contact/contact';
 import { PopupDescription } from './components/popup-description/popup-description';
@@ -39,6 +40,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     PopupDescription
   ],
   imports: [
+    MatProgressBarModule,
     MatProgressSpinnerModule,
     MatDialogModule,
     MatToolbarModule,
