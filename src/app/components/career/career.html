@@ -1,0 +1,29 @@
+<div class="trajectory-wrapper fade-in">
+  <div class="trajectory-box">
+    <svg class="trajectory-line" viewBox="0 0 1000 200" preserveAspectRatio="none">
+      <path
+        d="M 0 100
+           C 125 150, 125 50, 250 100
+           S 375 150, 500 100
+           S 625 50, 750 100
+           S 875 150, 1000 100"
+        class="trajectory-path"
+      />
+    </svg>
+
+    <div class="steps-container">
+      <div
+        class="step"
+        *ngFor="let step of steps; let i = index"
+        [style.left.%]="i * (100 / (steps.length - 1))"
+        [style.top.%]="getStepTop(i)"
+      >
+        <div class="circle">
+          {{ i + 1 }}
+          <span class="tooltip">{{ step.description }}</span>
+        </div>
+        <div class="label">{{ step.title }}</div>
+      </div>
+    </div>
+  </div>
+</div>

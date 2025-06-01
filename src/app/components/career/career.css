@@ -1,0 +1,117 @@
+.trajectory-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+.trajectory-box {
+  position: relative;
+  width: 68%;
+  height: 250px;
+  background-color: var(--background, #fff);
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.trajectory-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.trajectory-path {
+  fill: none;
+  stroke: navy;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: drawLine 2s ease forwards;
+}
+
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.steps-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.step {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.step:hover .circle {
+  transform: scale(1.1);
+}
+
+.circle .tooltip {
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--text-color, #222);
+  color: var(--background, #fff);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.circle:hover .tooltip {
+  opacity: 1;
+}
+
+.label {
+  font-size: 0.9rem;
+  color: var(--text-color, #222);
+  margin-top: 0.25rem;
+  max-width: 120px;
+  word-wrap: break-word;
+}
+
+/* Animación */
+.fade-in {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
