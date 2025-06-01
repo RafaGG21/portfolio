@@ -1,5 +1,7 @@
 
 import { Component, ElementRef, AfterViewInit, Renderer2, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { PopupDescription } from '../popup-description/popup-description';
 
 @Component({
   selector: 'app-career',
@@ -9,6 +11,8 @@ import { Component, ElementRef, AfterViewInit, Renderer2, ViewChild } from '@ang
 })
 export class Career implements AfterViewInit {
   @ViewChild('trajectoryBox', { static: false }) trajectoryBox!: ElementRef;
+
+  constructor(private dialog: MatDialog) {}
 
   ngAfterViewInit(): void {
     const observer = new IntersectionObserver(
@@ -23,6 +27,7 @@ export class Career implements AfterViewInit {
         threshold: 0.3
       }
     );
+
 
     if (this.trajectoryBox?.nativeElement) {
       observer.observe(this.trajectoryBox.nativeElement);
@@ -52,6 +57,10 @@ export class Career implements AfterViewInit {
   }
 
 
-
+  openPopup(title: string, description: string) {
+    this.dialog.open(PopupDescription, {
+      data: { title, description }
+    });
+  }
 
 }

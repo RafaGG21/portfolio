@@ -1,22 +1,40 @@
-<nav class="navbar" [ngClass]="{ 'light-mode': darkMode, 'dark-mode': !darkMode }">
-  <div class="nav-left">
-    <a routerLink="/about-me" class="nav-link">{{ 'ABOUT_ME' | translate }}</a>
-    <a routerLink="/projects" class="nav-link">{{ 'PROJECTS' | translate }}</a>
-  </div>
+<mat-sidenav-container class="sidenav-container">
+  <!-- SIDENAV -->
+  <mat-sidenav #sidenav mode="over" class="sidenav" (closedStart)="opened = false">
+    <a style="display: block;" routerLink="/about-me" (click)="sidenav.close()">{{ 'ABOUT_ME' | translate }}</a>
+    <a style="display: block;" routerLink="/projects" (click)="sidenav.close()">{{ 'PROJECTS' | translate }}</a>
+    <a style="display: block;" routerLink="/contact" (click)="sidenav.close()">{{ 'CONTACT' | translate }}</a>
+  </mat-sidenav>
 
-  <div class="nav-right">
-    <div class="dropdown-language">
-      <button (click)="toggleDropdown()">{{ getLanguageName(selectedLanguage) }}</button>
-      <ul [class.show]="dropdownOpen">
-        <li *ngFor="let lang of languages" (click)="changeLanguage(lang.code)">
-          <img [src]="lang.flag" alt="{{lang.name}}" width="20" />
-          {{ lang.name }}
-        </li>
-      </ul>
-  </div>
+  <!-- MAIN CONTENT -->
+  <mat-sidenav-content>
+    <mat-toolbar [ngClass]="darkMode ? 'light-navbar' : 'dark-navbar'" class="navbar">
 
-    <button (click)="toggleDarkMode()" class="ml-10px">
-      {{ darkMode ? 'Modo claro' : 'Modo oscuro' }}
-    </button>
-  </div>
-</nav>
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+
+      <span class="toolbar-spacer"></span>
+
+      <!-- Language Dropdown -->
+      <div class="dropdown-language" [class.open]="dropdownOpen" >
+        <button mat-button (click)="toggleDropdown()">
+          {{ getLanguageName(selectedLanguage) }}
+        </button>
+        <ul *ngIf="dropdownOpen" [ngClass]="darkMode ? 'light-navbar' : 'dark-navbar'">
+          <li *ngFor="let lang of languages" (click)="changeLanguage(lang.code)">
+            <img [src]="lang.flag" alt="{{ lang.name }}" width="20" />
+            {{ lang.name }}
+          </li>
+        </ul>
+      </div>
+
+      <!-- Dark Mode Toggle -->
+      <button mat-button (click)="toggleDarkMode()">
+        <i [ngClass]="darkMode ? 'fa-regular fa-sun' : 'fa-regular fa-moon'"></i>
+      </button>
+
+    </mat-toolbar>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
