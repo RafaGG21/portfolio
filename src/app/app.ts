@@ -49,10 +49,6 @@ export class App implements OnInit {
     setTimeout(() => this.loading = false, 1000);
   }
 
-  toggleDarkMode() {
-    this.darkMode = !this.darkMode;
-  }
-
   toggleDropdown() {
     this.dropdownOpen = !this.dropdownOpen;
   }
@@ -68,9 +64,10 @@ export class App implements OnInit {
     return lang ? lang.name : code;
   }
 
-  onDarkModeChange(isDark: boolean) {
-    this.isDarkMode = isDark;
-    if (isDark) {
+  toggleDarkMode() {
+    this.darkMode = !this.darkMode;
+
+    if (this.darkMode) {
       document.body.classList.add('dark-mode');
       document.body.classList.remove('light-mode');
     } else {
