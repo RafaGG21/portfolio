@@ -1,0 +1,18 @@
+<nav class="navbar" [ngClass]="{ 'light-mode': darkMode, 'dark-mode': !darkMode }">
+  <div class="nav-left">
+    <a routerLink="/about" class="nav-link">{{ selectedLanguage === 'es' ? 'Sobre mí' : selectedLanguage === 'en' ? 'About Me' : 'À propos' }}</a>
+    <a routerLink="/projects" class="nav-link">{{ selectedLanguage === 'es' ? 'Proyectos' : selectedLanguage === 'en' ? 'Projects' : 'Projets' }}</a>
+  </div>
+
+  <div class="nav-right">
+    <select >
+      <option value="es">Español</option>
+      <option value="en">English</option>
+      <option value="fr">Français</option>
+    </select>
+
+    <button (click)="toggleDarkMode()" class="ml-10px">
+      {{ darkMode ? 'Modo claro' : 'Modo oscuro' }}
+    </button>
+  </div>
+</nav>

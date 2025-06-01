@@ -1,0 +1,4 @@
+<navbar (darkModeOutput)="onDarkModeChange($event)"></navbar>
+<div [ngClass]="{ 'dark-mode': isDarkMode, 'light-mode': !isDarkMode }">
+  <router-outlet></router-outlet>
+</div>
