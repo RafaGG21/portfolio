@@ -12,6 +12,9 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { Projets } from './pages/projets/projets';
 import { Career } from './components/career/career';
+import { Wrapper } from './components/wrapper/wrapper';
+import { Spinner } from './components/spinner/spinner';
+
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -23,7 +26,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     NavbarComponent,
     AboutMe,
     Projets,
-    Career
+    Career,
+    Wrapper,
+    Spinner
   ],
   imports: [
     BrowserModule,
