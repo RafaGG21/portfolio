@@ -7,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrl: './about-me.css'
 })
 export class AboutMe {
-
+  animate: boolean = false;
+  ngOnInit(): void {
+    // Activa la animación tras una pequeña pausa
+    setTimeout(() => {
+      this.animate = true;
+    }, 500); // Tiempo mínimo para asegurar que Angular renderiza antes
+  }
 }
