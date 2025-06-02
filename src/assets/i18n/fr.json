@@ -20,5 +20,9 @@
   "JOB_2_TITLE": "Stagiaire",
   "JOB_2_DESC": "Projet pour l'administration publique française. Développement de tests unitaires, corrections de bugs applicatifs.",
   "WORK": "Carrière professionnelle",
+  "EMAIL":"Courriel",
+  "ABOUT":"Objet",
+  "MESSAGE":"Message",
+  "SEND": "Envoyer",
   "RIGHTS": "Tous droits réservés"
 }

@@ -20,5 +20,9 @@
   "JOB_2_TITLE": "Internship",
   "JOB_2_DESC": "Project for the French public administration. Unit test development, application bug fixes.",
   "WORK": "Professional career",
+  "EMAIL":"Email",
+  "ABOUT":"Subject",
+  "MESSAGE":"Message",
+  "SEND": "Send",
   "RIGHTS": "All rights reserved"
 }

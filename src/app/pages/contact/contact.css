@@ -47,7 +47,11 @@ form button {
 }
 
 form button:hover {
-  background-color: #5d9cec; /* Variante más clara del accent */
+  background-color: #4caf50; /* Variante más clara del accent */
+  transform: scale(1.02);
+}
+form button{
+  background-color: #5d9cec;  /* Variante más clara del accent */
   transform: scale(1.02);
 }
 

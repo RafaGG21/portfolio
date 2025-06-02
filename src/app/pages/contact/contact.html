@@ -1,16 +1,16 @@
 <div class="contact-container fade-in">
-  <h2>Contacto</h2>
+  <h2>{{'CONTACT' | translate}}</h2>
 
   <form [formGroup]="contactForm" (ngSubmit)="sendEmail()">
-    <label for="email">Correo electrónico</label>
+    <label for="email">{{'EMAIL' | translate}}</label>
     <input id="email" type="email" formControlName="email" required />
 
-    <label for="subject">Asunto</label>
+    <label for="subject">{{'ABOUT' | translate}}</label>
     <input id="subject" type="text" formControlName="subject" required />
 
-    <label for="message">Mensaje</label>
+    <label for="message">{{'MESSAGE' | translate}}</label>
     <textarea id="message" rows="6" formControlName="message" required></textarea>
 
-    <button type="submit" [disabled]="contactForm.invalid">Enviar</button>
+    <button type="submit" [disabled]="contactForm.invalid">{{'SEND' | translate}}</button>
   </form>
 </div>

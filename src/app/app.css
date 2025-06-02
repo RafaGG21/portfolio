@@ -199,3 +199,7 @@ mat-sidenav-content {
 .color-spinner{
   color: #b30b0b;
 }
+
+li:hover{
+  background-color: #003366 !important;
+}

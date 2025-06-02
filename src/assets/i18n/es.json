@@ -20,6 +20,9 @@
   "JOB_1_DESC": "Projet pour l'administration publique française. Technologies : Java 8, Spring, Angular, JSF, Primefaces, SQL, Sonarqube et Jenkins. Méthodologie Scrum. Jira et Confluence.",
   "JOB_2_TITLE": "Stagiaire",
   "JOB_2_DESC": "Projet pour l'administration publique française. Développement de tests unitaires, corrections de bugs applicatifs.",
-
+  "EMAIL":"Correo electrónico",
+  "ABOUT":"Asunto",
+  "MESSAGE":"Mensaje",
+  "SEND": "Enviar",
   "RIGHTS": "Todos los derechos reservados"
 }

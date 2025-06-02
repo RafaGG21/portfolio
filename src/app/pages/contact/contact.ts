@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import emailjs from 'emailjs-com';
 import Swal from 'sweetalert2';
+import { environment } from '../../../environments/environment';
+
 
 @Component({
   selector: 'app-contact',
@@ -35,19 +37,29 @@ export class Contact {
         if (result.isConfirmed) {
           const formData = this.contactForm.value;
 
-          // Aquí va tu lógica de envío (EmailJS, API, etc.)
-          console.log('Mensaje enviado:', formData);
-          emailjs.send('service_id', 'template_id', {
-            from_name: formData.email,
-            subject: formData.subject,
-            message: formData.message,
-          }, 'public_key')
-          .then(res => Swal.fire('Enviado', 'Tu mensaje ha sido enviado correctamente.', 'success'))
-          .catch(err => console.log('Error al enviar'));
-          this.contactForm.reset();
+          emailjs.send(
+            environment.emailjs.serviceId,
+            environment.emailjs.templateId,
+            {
+              from_name: formData.email,
+              subject: formData.subject,
+              message: formData.message,
+              reply_to: formData.email,
+            },
+            environment.emailjs.publicKey
+          )
+          .then(() => {
+            Swal.fire('Enviado', 'Tu mensaje ha sido enviado correctamente.', 'success');
+            this.contactForm.reset();
+          })
+          .catch(err => {
+            console.error('Error al enviar el correo:', err);
+            Swal.fire('Error', 'No se pudo enviar el mensaje. Inténtalo más tarde.', 'error');
+          });
         }
       });
+    } else {
+      Swal.fire('Campos incompletos', 'Por favor, completa todos los campos correctamente.', 'warning');
     }
   }
-
 }
