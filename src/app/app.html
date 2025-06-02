@@ -2,9 +2,9 @@
 
   <!-- SIDENAV -->
   <mat-sidenav #sidenav mode="over" class="sidenav" (closedStart)="opened = false">
-    <a style="display: block;" routerLink="/about-me" (click)="sidenav.close()">{{ 'ABOUT_ME' | translate }}</a>
-    <a style="display: block;" routerLink="/projects" (click)="sidenav.close()">{{ 'PROJECTS' | translate }}</a>
-    <a style="display: block;" routerLink="/contact" (click)="sidenav.close()">{{ 'CONTACT' | translate }}</a>
+    <a style="display: block;" routerLink="/about-me" (click)="sidenav.close()" routerLinkActive="active">{{ 'ABOUT_ME' | translate }}</a>
+    <a style="display: block;" routerLink="/projects" (click)="sidenav.close()" routerLinkActive="active">{{ 'PROJECTS' | translate }}</a>
+    <a style="display: block;" routerLink="/contact" (click)="sidenav.close()" routerLinkActive="active">{{ 'CONTACT' | translate }}</a>
   </mat-sidenav>
 
   <!-- MAIN CONTENT -->
@@ -36,13 +36,19 @@
     </mat-toolbar>
 
     <!-- SPINNER o CONTENIDO -->
-    <ng-container *ngIf="loading; else content">
+    <ng-container *ngIf="false">
       <mat-progress-bar
       mode="indeterminate"
       color="primary"
       class="green-progress-bar">
-    </mat-progress-bar>
+      </mat-progress-bar>
+    </ng-container>
 
+        <!-- SPINNER o CONTENIDO -->
+    <ng-container *ngIf="loading; else content">
+      <div class="spinner-overlay">
+        <div class="spinner-border text-primary big-spinner" role="status"></div>
+      </div>
     </ng-container>
 
     <ng-template #content>

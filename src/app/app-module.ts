@@ -21,10 +21,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { Contact } from './pages/contact/contact';
 import { PopupDescription } from './components/popup-description/popup-description';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { RevealTextDirective } from './directives/reveal-text';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -37,9 +39,11 @@ export function HttpLoaderFactory(http: HttpClient) {
     Projets,
     Career,
     Contact,
-    PopupDescription
+    PopupDescription,
+    RevealTextDirective
   ],
   imports: [
+    MatTooltipModule,
     MatProgressBarModule,
     MatProgressSpinnerModule,
     MatDialogModule,
@@ -50,6 +54,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatButtonModule,
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     TranslateModule.forRoot({
       defaultLanguage: 'es',

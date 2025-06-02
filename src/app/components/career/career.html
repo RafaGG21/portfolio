@@ -1,50 +1,52 @@
+
+<h2 class="trajectory-title">{{ 'STUDIES_TITLE' | translate }}</h2>
+
 <div class="trajectory-wrapper fade-in card-style">
   <div class="trajectory-box" #trajectoryBox>
     <svg class="trajectory-line" viewBox="0 0 1000 200" preserveAspectRatio="none">
-      <path
-        d="M 0 100
-           C 125 150, 125 50, 250 100
-           S 375 150, 500 100
-           S 625 50, 750 100
-           S 875 150, 1000 100"
-        class="trajectory-path"
-      />
+      <path  d="M 50 180 C 300 120, 700 60, 950 20" class="trajectory-path" />
+
     </svg>
 
     <div class="steps-container">
-      <div class="step" style="left: 5%; top: 25%;">
-        <button mat-icon-button (click)="openPopup('FP Desarrollo Web', 'Estudios de formación profesional en desarrollo web.')">
+      <div class="step" style="left: 5%; top: 87%;">
+        <button
+          mat-icon-button
+          [matTooltip]="'JAVA_COURSE' | translate"
+          (click)="handleClick('JAVA_COURSE', 'JAVA_DESC')"
+        >
           <div class="circle">1</div>
         </button>
-        <div class="label">FP Desarrollo Web</div>
       </div>
 
-      <div class="step" style="left: 21%; top: 65%;">
-        <button mat-icon-button (click)="openPopup('Bootcamp Java Fullstack', 'Programa intensivo sobre desarrollo Fullstack con Java.')">
+      <div class="step" style="left: 30%; top: 60%;">
+        <button
+          mat-icon-button
+          [matTooltip]="'DEVOPS_COURSE' | translate"
+          (click)="handleClick('DEVOPS_COURSE', 'DEVOPS_DESC')"
+        >
           <div class="circle">2</div>
         </button>
-        <div class="label">Bootcamp Java Fullstack</div>
       </div>
 
-      <div class="step" style="left: 64%; top: 12%;">
-        <button mat-icon-button (click)="openPopup('Curso Python IA', 'Curso especializado en Python e inteligencia artificial.')">
+      <div class="step" style="left: 65%; top: 27%;">
+        <button
+          mat-icon-button
+          [matTooltip]="'PYTHON_COURSE' | translate"
+          (click)="handleClick('PYTHON_COURSE', 'PYTHON_DESC')"
+        >
           <div class="circle">3</div>
         </button>
-        <div class="label">Curso Python IA</div>
       </div>
 
-      <div class="step" style="left: 84%; top: 75%;">
-        <button mat-icon-button (click)="openPopup('Proyecto Personal', 'Desarrollo de proyectos personales para aplicar conocimientos.')">
+      <div class="step" style="left: 86%; top: 10%;">
+        <button
+          mat-icon-button
+          [matTooltip]="'FP_COURSE' | translate"
+          (click)="handleClick('FP_COURSE', 'FP_DESC')"
+        >
           <div class="circle">4</div>
         </button>
-        <div class="label">Proyecto Personal</div>
-      </div>
-
-      <div class="step" style="left: 98%; top: 50%;">
-        <button mat-icon-button (click)="openPopup('Trabajo en Inetum', 'Experiencia laboral como desarrollador en Inetum.')">
-          <div class="circle">5</div>
-        </button>
-        <div class="label">Trabajo en<br>Inetum</div>
       </div>
     </div>
   </div>

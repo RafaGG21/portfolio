@@ -16,6 +16,7 @@
   border-radius: 1.5rem;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
   overflow: visible;
+  padding-inline: 3rem; /* nuevo: margen visual izquierdo y derecho */
 }
 
 /* SVG y path */
@@ -23,7 +24,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: calc(100% - 6rem); /* nuevo: restamos el padding */
   height: 100%;
   z-index: 0;
 }
@@ -57,13 +58,13 @@
 .step {
   position: absolute;
   text-align: center;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   white-space: nowrap;
 }
 
 .circle {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   background-color: red;
   border-radius: 50%;
   color: white;
@@ -82,33 +83,26 @@
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .trajectory-box {
-    height: 300px;
+  .step {
+    transform: translate(-50%, -50%) scale(0.8);
   }
+
+  .trajectory-box {
+    padding-inline: 1.5rem; /* menos margen en pantallas pequeñas */
+  }
+
+  .trajectory-line {
+    width: calc(100% - 3rem); /* ancho reducido con nuevo padding */
+  }
+
   .trajectory-wrapper {
-    width: 95%;
-    max-width: 100%;
-    padding: 1.5rem 1rem;
-    margin: 2rem auto;
-    overflow-x: hidden;
+    width: 100%;
+    margin: 3rem auto;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
     box-sizing: border-box;
   }
-
-  .trajectory-box {
-    height: 320px;
-    border-radius: 1rem;
-  }
-
-  .steps-container .step {
-    font-size: 0.75rem;
-  }
-
-  /* Reposicionamiento adaptado manualmente */
-  .steps-container .step:nth-child(1) { left: 13% !important; top: 30%; }
-  .steps-container .step:nth-child(2) { left: 22% !important;; top: 65%; }
-  .steps-container .step:nth-child(3) { left: 55%; top: 20%; }
-  .steps-container .step:nth-child(4) { left: 75%; top: 70%; }
-  .steps-container .step:nth-child(5) { left: 90%; top: 50%; }
 }
 
 .spinner-container {
@@ -118,4 +112,11 @@
   align-items: center;
   height: calc(100vh - 64px); /* ajusta según el alto de tu toolbar */
   width: 100%;
+}
+
+.trajectory-title {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--primary-text, #003366);
+  margin-bottom: 1rem;
 }

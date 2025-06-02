@@ -5,5 +5,14 @@
   "DARK_MODE": "Modo oscuro",
   "LIGHT_MODE": "Modo claro",
   "CONTACT": "Contacto",
-  "DESCRIPTION": "Soy un desarrollador de software con 3 años de experiencia.He estudiado dos años del Ciclo de Desarrollo de Aplicaciones Web.También he realizado un bootcamp de Java Fullstack, un curso de Fullstack DevOpsy otro curso de Python para Inteligencia Artificial en la Escuela de Organización Industrial. Soy autodidacta y estoy en formación constante para aprender y mejorar."
+  "DESCRIPTION": "Soy un desarrollador de software con 3 años de experiencia.He estudiado dos años del Ciclo de Desarrollo de Aplicaciones Web.También he realizado un bootcamp de Java Fullstack, un curso de Fullstack DevOpsy otro curso de Python para Inteligencia Artificial en la Escuela de Organización Industrial. Soy autodidacta y estoy en formación constante para aprender y mejorar.",
+  "JAVA_COURSE": "Curso de Java Fullstack",
+  "JAVA_DESC": "Formación intensiva en desarrollo Fullstack con Java.",
+  "DEVOPS_COURSE": "Curso de Fullstack DevOps",
+  "DEVOPS_DESC": "Curso avanzado sobre integración y despliegue continuo.",
+  "PYTHON_COURSE": "Curso de Python para Inteligencia Artificial",
+  "PYTHON_DESC": "Especialización en IA con Python.",
+  "FP_COURSE": "FP Desarrollo de Aplicaciones Web",
+  "FP_DESC": "Formación profesional en desarrollo web.",
+  "STUDIES_TITLE": "Estudios"
 }

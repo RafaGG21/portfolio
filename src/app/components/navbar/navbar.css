@@ -95,3 +95,26 @@ mat-sidenav a:hover {
   align-items: center;
   height: 100vh;
 }
+
+.spinner-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.7); /* fondo semitransparente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.spinner-lg {
+  width: 4rem;
+  height: 4rem;
+  border-width: 0.4em;
+}
+
+li:hover{
+  background-color: --active-bg;
+}
