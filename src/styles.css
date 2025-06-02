@@ -53,3 +53,38 @@ app-footer {
 body{
   overflow-x: hidden;
 }
+h2{
+  color: #003366 !important; /* modo claro por defecto */
+  transition: color 0.3s ease;
+}
+body.dark-mode  h2 {
+  color: orange !important; /* color modo oscuro */
+}
+
+/* styles.css */
+
+app-footer {
+  background-color: #b30b0b !important; /* modo claro */
+  color: white !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode app-footer {
+  background-color: #f5f5f5 !important;
+  color: black !important;
+}
+
+body.dark-mode app-footer a {
+  color:#121212;
+}
+
+app-footer a i{
+  color: #ffffff; /* o el color que uses normalmente en modo claro */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Estilo para modo oscuro */
+body.dark-mode app-footer a i{
+  color: #000000; /* o el color que quieras en modo oscuro */
+}
