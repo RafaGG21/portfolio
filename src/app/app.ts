@@ -9,7 +9,7 @@ import { TranslateService } from '@ngx-translate/core';
   standalone: false
 })
 export class App implements OnInit {
-  protected title = 'portfolio';
+  protected title = 'Rafael Gandolfo | Portfolio';
   isDarkMode = false;
   darkMode = false;
   dropdownOpen = false;

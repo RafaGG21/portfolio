@@ -27,6 +27,8 @@ import { Contact } from './pages/contact/contact';
 import { PopupDescription } from './components/popup-description/popup-description';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RevealTextDirective } from './directives/reveal-text';
+import { Work } from './components/work/work';
+import { Footer } from './components/footer/footer';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -40,7 +42,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     Career,
     Contact,
     PopupDescription,
-    RevealTextDirective
+    RevealTextDirective,
+    Work,
+    Footer
   ],
   imports: [
     MatTooltipModule,

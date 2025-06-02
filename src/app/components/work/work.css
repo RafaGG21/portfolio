@@ -1,0 +1,101 @@
+.trabajo-wrapper {
+  width: 72%;
+  margin: 3rem auto;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+.trabajo-box {
+  position: relative;
+  height: 400px;
+  background-color: var(--background, #fff);
+  border-radius: 1.5rem;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  padding-left: 0;
+}
+
+/* Línea vertical con animación */
+.trabajo-line {
+  position: absolute;
+  top: 30px;
+  left: 80px; /* separada del borde */
+  width: 4px;
+  height: 90%;
+  background-color: #003366;
+  animation: growLine 2s ease forwards;
+  transform-origin: top;
+}
+
+@keyframes growLine {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 90%;
+  }
+}
+
+/* Pasos alineados horizontalmente con círculos sobre la línea */
+.trabajo-step {
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  left: 90px; /* cerca de la línea */
+  width: calc(100% - 120px); /* ajusta el ancho */
+}
+
+.trabajo-step:nth-child(2) {
+  top: 40px;
+}
+
+.trabajo-step:nth-child(3) {
+  top: 220px;
+}
+
+/* Círculo encima de la línea */
+.circle {
+  position: absolute;
+  left: -17px; /* centrado sobre la línea (80px línea - 6px compensación) */
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+/* Contenido del trabajo */
+.trabajo-content {
+  margin-left: 30px;
+}
+
+.label {
+  font-weight: bold;
+  color: orange;
+  font-size: 1rem;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  margin-top: 0.2rem;
+}
+
+@media (max-width: 768px) {
+  .trabajo-wrapper {
+    width: 100%;
+  }
+}

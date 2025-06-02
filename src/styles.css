@@ -30,3 +30,26 @@ body, mat-sidenav-container, mat-sidenav-content {
   color: inherit;
   background-color: inherit;
 }
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+mat-sidenav-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+mat-sidenav-content {
+  flex: 1 0 auto;
+}
+
+app-footer {
+  flex-shrink: 0;
+}
+
+body{
+  overflow-x: hidden;
+}

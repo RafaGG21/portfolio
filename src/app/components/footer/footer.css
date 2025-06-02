@@ -1,0 +1,23 @@
+:host {
+  display: block;
+  width: 100%;
+  background-color: #b30b0b;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.footer-icons {
+  margin-top: 10px;
+}
+
+.footer-icons a {
+  margin: 0 10px;
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.footer-icons a:hover {
+  color: #fff3f3;
+}

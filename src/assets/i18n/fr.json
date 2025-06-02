@@ -14,5 +14,11 @@
   "PYTHON_DESC": "Spécialisation en intelligence artificielle avec Python.",
   "FP_COURSE": "Formation Pro Développement Web",
   "FP_DESC": "Formation professionnelle en développement web.",
-  "STUDIES_TITLE": "Études"
+  "STUDIES_TITLE": "Études",
+  "JOB_1_TITLE": "Développeur logiciel chez Inetum",
+  "JOB_1_DESC": "Projet pour l'administration publique française. Technologies : Java 8, Spring, Angular, JSF, Primefaces, SQL, Sonarqube et Jenkins. Méthodologie Scrum. Jira et Confluence.",
+  "JOB_2_TITLE": "Stagiaire",
+  "JOB_2_DESC": "Projet pour l'administration publique française. Développement de tests unitaires, corrections de bugs applicatifs.",
+  "WORK": "Carrière professionnelle",
+  "RIGHTS": "Tous droits réservés"
 }

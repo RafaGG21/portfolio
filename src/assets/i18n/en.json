@@ -14,6 +14,11 @@
   "PYTHON_DESC": "Specialization in AI with Python.",
   "FP_COURSE": "Web Development Vocational Training",
   "FP_DESC": "Vocational training in web development.",
-  "STUDIES_TITLE": "Education"
-
+  "STUDIES_TITLE": "Education",
+  "JOB_1_TITLE": "Software Developer at Inetum",
+  "JOB_1_DESC": "Project for the French public administration. Technologies: Java 8, Spring, Angular, JSF, Primefaces, SQL, Sonarqube, and Jenkins. Scrum methodology. Jira and Confluence.",
+  "JOB_2_TITLE": "Internship",
+  "JOB_2_DESC": "Project for the French public administration. Unit test development, application bug fixes.",
+  "WORK": "Professional career",
+  "RIGHTS": "All rights reserved"
 }
