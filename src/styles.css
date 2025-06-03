@@ -88,3 +88,5 @@ app-footer a i{
 body.dark-mode app-footer a i{
   color: #000000; /* o el color que quieras en modo oscuro */
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
