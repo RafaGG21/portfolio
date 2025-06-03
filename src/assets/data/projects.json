@@ -4,8 +4,10 @@
     "name": "Trivial Harry Potter",
     "images": ["assets/pictures/trivial/trivial_1.png", "assets/pictures/trivial/trivial_2.png",
     "assets/pictures/trivial/trivial_3.png","assets/pictures/trivial/trivial_4.png", "assets/pictures/trivial/trivial_5.png"],
-    "description": "",
-    "technologies": ["aa", "aa"]
+    "description_es": "Este programa consiste en un trivial sobre la saga de libros y películas Harry Potter. El jugador/a podrá elegir las preguntas de un libro y se presentarán aleatoriamente. El jugador tiene un periodo de tiempo para contestar. Si el jugador contesta, pasa a la siguiente pregunta. De lo contrario, el jugador pierde.",
+    "description_en": "This project is a trivia game about the Harry Potter book and film series. Players can choose questions from a book, and they will be presented randomly. They have a set amount of time to answer. If they answer correctly, they move on to the next question. Otherwise, he/she loses.",
+    "description_fr": "Ce projet est un jeu-questionnaire sur la saga Harry Potter. Les joueurs peuvent choisir des questions tirées d'un livre et présentées aléatoirement. Ils disposent d'un temps limité pour répondre. Si la réponse est correcte, ils passent à la question suivante. Sinon, ils perdent.",
+    "technologies": ["Angular", "Java", "Spring", "Typescript", "HTML","CSS", "PostgreSQL"]
 
   },
   {
@@ -13,15 +15,19 @@
     "name": "Podbuster",
     "images": ["assets/pictures/podbuster/podbuster_1.png", "assets/pictures/podbuster/podbuster_2.png",
     "assets/pictures/podbuster/podbuster_3.png","assets/pictures/podbuster/podbuster_4.png", "assets/pictures/podbuster/podbuster_5.png"],
-    "description": "",
-    "technologies": ["aa", "aa"]
+    "description_es": "Este proyecto consiste en una aplicación de música en la cual el usuario puede registrarse, iniciar sesión, añadir podcast, eliminarlos y buscarlos por autor, género y titulo.",
+    "description_en": "This project consists of a music application in which the user can register, log in, add podcasts, delete them, and search for them by author, genre, and title.",
+    "description_fr": "Ce projet consiste en une application musicale dans laquelle l'utilisateur peut s'inscrire, se connecter, ajouter des podcasts, les supprimer et les rechercher par auteur, genre et titre.",
+    "technologies": ["React", "NodeJS", "Docker", "MongoDB", "HTML","CSS"]
   },
   {
     "id": 3,
     "name": "Tienda informática",
     "images": ["assets/pictures/tienda/tienda_1.jpg", "assets/pictures/tienda/tienda_2.jpg",
     "assets/pictures/tienda/tienda_3.jpg","assets/pictures/tienda/tienda_4.jpg", "assets/pictures/tienda/tienda_5.jpg", "assets/pictures/tienda/tienda_6.jpg"],
-    "description": "",
-    "technologies": ["aa", "aa"]
+    "description_es": "Este proyecto es una tienda de informática y accesorios. El usuario puede registrarse, iniciar sesión. Además, puede buscar articulos por nombre y tipo, añadir productos al carrito y pagar por paypal. A su vez, el usuario administrador puede gestionar las ventas y añadir, eliminar o editar productos.",
+    "description_en": "This project is a computer and accessories store. Users can register and log in. They can also search for items by name and type, add products to their cart, and pay via PayPal. The administrator can also manage sales and add, delete, or edit products.",
+    "description_fr": "Ce projet est une boutique d'informatique et d'accessoires. Les utilisateurs peuvent s'inscrire et se connecter. Ils peuvent également rechercher des articles par nom et par type, ajouter des produits à leur panier et payer via PayPal. L'administrateur peut également gérer les ventes et ajouter, supprimer ou modifier des produits.",
+    "technologies": ["Angular", "NodeJS", "Docker", "MongoDB", "HTML","CSS", "Typescript"]
   }
 ]
