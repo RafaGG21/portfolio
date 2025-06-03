@@ -2,7 +2,7 @@
   display: flex;
   gap: 2rem;
   padding: 2rem;
-  padding-bottom: 21rem; /* ⬅️ Añade espacio inferior */
+  padding-bottom: 35rem; /* ⬅️ Añade espacio inferior */
   align-items: flex-start;
   flex-wrap: wrap;
 }
