@@ -1,1 +1,20 @@
-<p>project-id works!</p>
+<div class="project-container" *ngIf="project">
+  <div class="carousel-wrapper">
+    <ngb-carousel *ngIf="project.images && project.images.length > 0" [showNavigationArrows]="true" [showNavigationIndicators]="true">
+      <ng-template ngbSlide *ngFor="let img of project.images">
+        <img [src]="img" class="d-block w-100" alt="Imagen del proyecto" />
+      </ng-template>
+    </ngb-carousel>
+  </div>
+
+
+  <div class="project-info">
+    <h2>{{ project.name }}</h2>
+    <p>{{ project.description_es }}</p>
+
+    <div class="badges">
+      <span *ngFor="let tech of project.technologies" class="badge">{{ tech }}</span>
+    </div>
+  </div>
+</div>
+
