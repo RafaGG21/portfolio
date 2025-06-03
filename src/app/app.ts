@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationStart, NavigationEnd, NavigationCancel, NavigationError } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-root',
@@ -74,5 +75,34 @@ export class App implements OnInit {
       document.body.classList.add('light-mode');
       document.body.classList.remove('dark-mode');
     }
+  }
+
+  confirmDownload() {
+    this.translate.get(['CV.TITLE', 'CV.TEXT', 'CV.CONFIRM', 'CV.CANCEL']).subscribe(translations => {
+      Swal.fire({
+        title: translations['CV.TITLE'],
+        text: translations['CV.TEXT'],
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#aaa',
+        confirmButtonText: translations['CV.CONFIRM'],
+        cancelButtonText: translations['CV.CANCEL']
+      }).then((result) => {
+        if (result.isConfirmed) {
+          this.downloadCV();
+        }
+      });
+    });
+  }
+
+  downloadCV() {
+    const lang = this.translate.currentLang || 'es';
+    const fileName = lang === 'fr' ? 'Rafael Gandolfo Garcia CV français.pdf' : lang === 'en' ?
+    'Rafael Gandolfo Garcia CV english.pdf' : 'Rafael Gandolfo Garcia CV español.pdf';
+    const link = document.createElement('a');
+    link.href = `assets/cv/${fileName}`;
+    link.download = fileName;
+    link.click();
   }
 }

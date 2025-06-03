@@ -24,5 +24,12 @@
   "ABOUT":"Subject",
   "MESSAGE":"Message",
   "SEND": "Send",
-  "RIGHTS": "All rights reserved"
+  "RIGHTS": "All rights reserved",
+  "CV": {
+    "TITLE": "Download CV?",
+    "TEXT": "Your CV will be downloaded based on the selected language.",
+    "CONFIRM": "Yes, download",
+    "CANCEL": "Cancel"
+  },
+  "DOWNLOAD": "Download"
 }

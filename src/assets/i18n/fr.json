@@ -24,5 +24,12 @@
   "ABOUT":"Objet",
   "MESSAGE":"Message",
   "SEND": "Envoyer",
-  "RIGHTS": "Tous droits réservés"
+  "RIGHTS": "Tous droits réservés",
+  "CV": {
+    "TITLE": "Télécharger le CV ?",
+    "TEXT": "Votre CV sera téléchargé selon la langue sélectionnée.",
+    "CONFIRM": "Oui, télécharger",
+    "CANCEL": "Annuler"
+  },
+  "DOWNLOAD": "Télécharger"
 }

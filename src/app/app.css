@@ -20,7 +20,8 @@
 }
 
 .sidenav a:hover {
-  background-color: #e0e0e0;
+  background-color:#b30b0b !important;
+  color: #ccc;
 }
 
 .navbar {
@@ -126,21 +127,24 @@ a {
   text-decoration: none;
   color: #b30b0b;;
   padding: 0.5rem 1rem;
-  margin: 0 0.25rem;
+  margin: 0 0.6rem;
   border-radius: 0.5rem;
   transition: background-color 0.3s, color 0.3s;
+  width: 50%;
 }
 
 a.active {
-  background-color: var(--active-bg);
-  color: #fff;
+  background-color: #b30b0b !important;
+  color: #fff !important;
   font-weight: 600;
   border: 1px solid var(--accent);
+  width: 50%;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 a:hover {
   background-color: var(--active-bg);
   color: #fff;
+  width: 50%;
   font-weight: 600;
   border: 1px solid var(--accent);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -200,6 +204,19 @@ mat-sidenav-content {
   color: #b30b0b;
 }
 
-li:hover{
-  background-color: #003366 !important;
+
+.cv-button {
+  background-color: var(--accent);
+  color: #b30b0b;
+  padding: 0.5rem 0.7rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.cv-button:hover {
+  background-color: #b30b0b !important;
+  color: #ccc;
 }

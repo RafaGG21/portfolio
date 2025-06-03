@@ -5,6 +5,8 @@
     <a style="display: block;" routerLink="/about-me" (click)="sidenav.close()" routerLinkActive="active">{{ 'ABOUT_ME' | translate }}</a>
     <a style="display: block;" routerLink="/projects" (click)="sidenav.close()" routerLinkActive="active">{{ 'PROJECTS' | translate }}</a>
     <a style="display: block;" routerLink="/contact" (click)="sidenav.close()" routerLinkActive="active">{{ 'CONTACT' | translate }}</a>
+    <button (click)="confirmDownload()" class="cv-button">Descargar CV</button>
+
   </mat-sidenav>
 
   <!-- MAIN CONTENT -->
