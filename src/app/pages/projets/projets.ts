@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Project } from '../../interfaces/project.interface';
+import { IProject } from '../../interfaces/project.interface';
 
 @Component({
   selector: 'app-projets',
@@ -9,12 +9,12 @@ import { Project } from '../../interfaces/project.interface';
   styleUrl: './projets.css'
 })
 export class Projets {
-  projects: Project[] = [];
+  projects: IProject[] = [];
 
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    this.http.get<Project[]>('assets/data/projects.json').subscribe((data: Project[]) => {
+    this.http.get<IProject[]>('assets/data/projects.json').subscribe((data: IProject[]) => {
       this.projects = data;
     });
   }
