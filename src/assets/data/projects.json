@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "Trivial Harry Potter",
+    "images": ["assets/pictures/trivial/trivial_1.png", "assets/pictures/trivial/trivial_2.png",
+    "assets/pictures/trivial/trivial_3.png","assets/pictures/trivial/trivial_4.png", "assets/pictures/trivial/trivial_5.png"],
+    "description": "",
+    "technologies": ["aa", "aa"]
+
+  },
+  {
+    "id": 2,
+    "name": "Podbuster",
+    "images": ["assets/pictures/podbuster/podbuster_1.png", "assets/pictures/podbuster/podbuster_2.png",
+    "assets/pictures/podbuster/podbuster_3.png","assets/pictures/podbuster/podbuster_4.png", "assets/pictures/podbuster/podbuster_5.png"],
+    "description": "",
+    "technologies": ["aa", "aa"]
+  },
+  {
+    "id": 3,
+    "name": "Tienda informática",
+    "images": ["assets/pictures/tienda/tienda_1.jpg", "assets/pictures/tienda/tienda_2.jpg",
+    "assets/pictures/tienda/tienda_3.jpg","assets/pictures/tienda/tienda_4.jpg", "assets/pictures/tienda/tienda_5.jpg", "assets/pictures/tienda/tienda_6.jpg"],
+    "description": "",
+    "technologies": ["aa", "aa"]
+  }
+]

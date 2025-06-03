@@ -29,6 +29,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RevealTextDirective } from './directives/reveal-text';
 import { Work } from './components/work/work';
 import { Footer } from './components/footer/footer';
+import { Project } from './pages/project/project'
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -45,7 +46,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     PopupDescription,
     RevealTextDirective,
     Work,
-    Footer
+    Footer,
+    Project
   ],
   imports: [
     MatTooltipModule,

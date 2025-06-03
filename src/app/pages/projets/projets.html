@@ -1,1 +1,7 @@
-<p>projets works!</p>
+<div class="projects-container">
+  <div class="project-card" *ngFor="let project of projects">
+    <img [src]="project.images[0]" [alt]="project.name" />
+    <h3>{{ project.name }}</h3>
+    <a [routerLink]="['/project', project.id]">Ver proyecto</a>
+  </div>
+</div>
