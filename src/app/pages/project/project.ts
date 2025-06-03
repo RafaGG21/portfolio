@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { IProject } from '../../interfaces/project.interface';
 @Component({
@@ -8,7 +8,7 @@ import { IProject } from '../../interfaces/project.interface';
   templateUrl: './project.html',
   styleUrl: './project.css'
 })
-export class Project {
+export class Project implements OnInit{
   project!: IProject;
 
   constructor(private route: ActivatedRoute, private http: HttpClient) {}
@@ -19,4 +19,5 @@ export class Project {
       this.project = projects.find(p => p.id === id);
     });
   }
+
 }

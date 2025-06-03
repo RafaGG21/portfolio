@@ -1,8 +1,22 @@
-<div class="project-container" *ngIf="project">
-  <div class="carousel-wrapper">
+<div class="project-container" *ngIf="project?.images?.length">
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1000">
+    <div class="carousel-indicators">
+      <button *ngFor="let image of project.images; let i = index"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              [attr.data-bs-slide-to]="i"
+              [class.active]="i === 0"
+              aria-current="true"
+              [attr.aria-label]="'Slide ' + (i + 1)">
+      </button>
+    </div>
 
+    <div class="carousel-inner">
+      <div class="carousel-item" *ngFor="let image of project.images; let i = index" [class.active]="i === 0">
+        <img class="d-block w-100" [src]="image" alt="Slide {{ i + 1 }}">
+      </div>
+    </div>
   </div>
-
 
   <div class="project-info">
     <h2>{{ project.name }}</h2>
@@ -10,7 +24,6 @@
 
     <div class="badges">
       <span *ngFor="let tech of project.technologies" class="badge">{{ tech }}</span>
-    </div>
+      </div>
   </div>
 </div>
-
