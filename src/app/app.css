@@ -20,8 +20,8 @@
 }
 
 .sidenav a:hover {
-  background-color:#b30b0b !important;
-  color: #ccc;
+
+  color: #070606;
 }
 
 .navbar {
@@ -70,15 +70,61 @@
   color: #ccc;
 }
 
-mat-sidenav a {
-  text-decoration: none;
-  color: inherit;
-  padding: 10px 0;
+/* Animación entrada izquierda a derecha con rebote suave */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-mat-sidenav a:hover {
-  font-weight: bold;
+mat-sidenav a {
+  position: relative;
+  display: block;
+  font-size: 1.2rem;
+  margin: 1.2rem 0;
+  padding: 0.5rem 0;
+  color: #000; /* Asegura buena visibilidad sobre fondo blanco */
+  text-decoration: none;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: slideIn 0.8s ease-out forwards;
 }
+
+/* Retraso progresivo para cada enlace */
+mat-sidenav a:nth-child(1) { animation-delay: 0.1s; }
+mat-sidenav a:nth-child(2) { animation-delay: 0.25s; }
+mat-sidenav a:nth-child(3) { animation-delay: 0.4s; }
+mat-sidenav a:nth-child(4) { animation-delay: 0.55s; }
+
+/* Subrayado rojo incompleto y animado */
+mat-sidenav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0.2rem;
+  left: 0;
+  width: 40%;
+  height: 2px;
+  background-color: red;
+  transition: width 0.4s cubic-bezier(0.25, 1.5, 0.5, 1);
+}
+
+/* En hover o si está activo: subrayado completo */
+mat-sidenav a:hover::after,
+mat-sidenav a.active::after {
+  width: 100%;
+}
+
+
 
 .dark-navbar {
   background-color: #b30b0b;
@@ -134,20 +180,14 @@ a {
 }
 
 a.active {
-  background-color: #b30b0b !important;
-  color: #fff !important;
+  color: #003366 !important;
   font-weight: 600;
-  border: 1px solid var(--accent);
   width: 50%;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 a:hover {
-  background-color: var(--active-bg);
-  color: #fff;
+  color: #003366 !important;
   width: 50%;
   font-weight: 600;
-  border: 1px solid var(--accent);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .spinner-overlay {
@@ -208,7 +248,7 @@ mat-sidenav-content {
 .cv-button {
   background-color: var(--accent);
   color: #b30b0b;
-  padding: 0.5rem 0.7rem;
+  padding: 0.5rem 0.3rem;
   border-radius: 0.5rem;
   border: none;
   cursor: pointer;

@@ -1,14 +1,17 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit  } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { IProject } from '../../interfaces/project.interface';
+import $ from 'jquery';
+
+
 @Component({
   selector: 'project',
   standalone: false,
   templateUrl: './project.html',
   styleUrl: './project.css'
 })
-export class Project implements OnInit{
+export class Project implements OnInit, AfterViewInit {
   project!: IProject;
 
   constructor(private route: ActivatedRoute, private http: HttpClient) {}
@@ -20,4 +23,10 @@ export class Project implements OnInit{
     });
   }
 
+  ngAfterViewInit(): void {
+    $('#carouselExampleIndicators').carousel({
+      interval: 1000,
+      ride: 'carousel'
+    });
+  }
 }

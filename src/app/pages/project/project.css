@@ -38,3 +38,11 @@
   margin: 0.25rem;
   font-size: 0.9rem;
 }
+
+.carousel-indicators li {
+  background-color: red;
+}
+
+.carousel-indicators .active {
+  background-color: darkred;
+}

@@ -1,5 +1,5 @@
-<div class="project-container" *ngIf="project?.images?.length">
-  <div *ngIf="project" id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="1000">
+<div class="project-container">
+  <div *ngIf="project?.images?.length" id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="1000">
     <ol class="carousel-indicators">
       <li *ngFor="let image of project.images; let i = index"
           [attr.data-target]="'#carouselExampleIndicators'"
@@ -14,6 +14,7 @@
       </div>
     </div>
   </div>
+
 
 
   <div class="project-info">

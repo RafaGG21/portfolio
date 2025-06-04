@@ -6,13 +6,13 @@
   margin: 3rem auto; /* centra y da espacio superior/inferior */
   padding: 2rem;
   border-radius: 1rem;
-  background-color: white;
+  background-color: #f1f5f8;
   color: var(--text-color);
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
   width: 90%;
   max-width: 1300px;
   transition: background-color 0.3s ease, color 0.3s ease;
-  border: 1px solid rgba(0, 0, 0, 0.1); /* borde sutil */
+  border: 2px solid rgba(0, 0, 0, 0.1); /* borde sutil */
 }
 
 .profile-img {

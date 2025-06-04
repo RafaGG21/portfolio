@@ -38,16 +38,16 @@
     </mat-toolbar>
 
     <!-- SPINNER o CONTENIDO -->
-    <ng-container *ngIf="false">
-      <mat-progress-bar
-      mode="indeterminate"
-      color="primary"
-      class="green-progress-bar">
-      </mat-progress-bar>
-    </ng-container>
 
-        <!-- SPINNER o CONTENIDO -->
+    <!-- SPINNER o CONTENIDO -->
     <ng-container *ngIf="loading; else content">
+      <ng-container>
+        <mat-progress-bar
+        mode="indeterminate"
+        color="primary"
+        class="green-progress-bar">
+        </mat-progress-bar>
+      </ng-container>
       <div class="spinner-overlay">
         <div class="spinner-border big-spinner color-spinner" role="status"></div>
       </div>
