@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import emailjs from 'emailjs-com';
 import Swal from 'sweetalert2';
 import { environment } from '../../../environments/environment';
+import { ThemeService } from '../../services/themeservice';
+import { TranslateService } from '@ngx-translate/core';
 
 
 @Component({
@@ -13,8 +15,10 @@ import { environment } from '../../../environments/environment';
 })
 export class Contact {
   contactForm: FormGroup;
+  darkMode: boolean = false;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private themeService: ThemeService,
+    private translate: TranslateService) {
     this.contactForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       subject: ['', Validators.required],

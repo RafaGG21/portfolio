@@ -93,3 +93,16 @@ body.dark-mode app-footer a i{
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body.dark-mode  .contact-container{
+  color: orange !important; /* color modo oscuro */
+  border: 2px solid #003366 !important;
+}
+
+body.dark-mode  .project-info{
+  color: orange !important; /* color modo oscuro */
+}
+
+body.dark-mode  .project-info h2{
+  color: #f2f4f7 !important; /* color modo oscuro */
+}

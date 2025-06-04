@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ThemeService } from '../../services/themeservice';
 
 @Component({
   selector: 'app-about-me',
@@ -7,11 +8,16 @@ import { Component } from '@angular/core';
   styleUrl: './about-me.css'
 })
 export class AboutMe {
+  darkMode: boolean = false;
   animate: boolean = false;
+
+  constructor(private themeService: ThemeService) {}
   ngOnInit(): void {
-    // Activa la animación tras una pequeña pausa
     setTimeout(() => {
       this.animate = true;
-    }, 500); // Tiempo mínimo para asegurar que Angular renderiza antes
+    }, 500);
+    this.themeService.darkMode$.subscribe(value => {
+      this.darkMode = value;
+    });
   }
 }

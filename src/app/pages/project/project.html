@@ -17,12 +17,16 @@
 
 
 
-  <div class="project-info">
+  <div class="project-info" *ngIf="project">
     <h2>{{ project.name }}</h2>
-    <p>{{ project.description_es }}</p>
-
+    <div [ngSwitch]="language">
+        <p *ngSwitchCase="'es'">{{ project.description_es }}</p>
+        <p *ngSwitchCase="'fr'">{{ project.description_fr }}</p>
+        <p *ngSwitchCase="'en'">{{ project.description_en }}</p>
+      <div *ngSwitchDefault>{{ project.description_es }}</div>
+    </div>
     <div class="badges">
-      <span *ngFor="let tech of project.technologies" class="badge">{{ tech }}</span>
+      <span *ngFor="let tech of project?.technologies" class="badge">{{ tech }}</span>
       </div>
   </div>
 </div>

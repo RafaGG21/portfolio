@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router, NavigationStart, NavigationEnd, NavigationCancel, NavigationError } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import Swal from 'sweetalert2';
+import { ThemeService } from './services/themeservice';
+import { LanguageService } from './services/language-service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +13,6 @@ import Swal from 'sweetalert2';
 })
 export class App implements OnInit {
   protected title = 'Rafael Gandolfo | Portfolio';
-  isDarkMode = false;
   darkMode = false;
   dropdownOpen = false;
   opened = false;
@@ -25,9 +26,12 @@ export class App implements OnInit {
     { code: 'fr', name: 'Français', flag: 'assets/flags/fr.png' }
   ];
 
-  constructor(private translate: TranslateService, private router: Router) {
+  constructor(private translate: TranslateService, private router: Router,
+    private themeService: ThemeService, private languageService: LanguageService
+  ) {
     translate.setDefaultLang(this.selectedLanguage);
     translate.use(this.selectedLanguage);
+    this.languageService.setLanguage(this.selectedLanguage);
   }
 
   ngOnInit(): void {
@@ -58,6 +62,8 @@ export class App implements OnInit {
     this.selectedLanguage = langCode;
     this.dropdownOpen = false;
     this.translate.use(langCode);
+    this.languageService.setLanguage(langCode);
+    //console.log(langCode)
   }
 
   getLanguageName(code: string): string {
@@ -75,6 +81,7 @@ export class App implements OnInit {
       document.body.classList.add('light-mode');
       document.body.classList.remove('dark-mode');
     }
+    this.themeService.setDarkMode(this.darkMode);
   }
 
   confirmDownload() {
