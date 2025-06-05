@@ -260,3 +260,23 @@ mat-sidenav-content {
   background-color: #b30b0b !important;
   color: #ccc;
 }
+
+mat-sidenav a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+mat-sidenav a i {
+  width: 1.2rem;
+  flex-shrink: 0;
+}
+
+mat-sidenav.sidenav {
+  width: 250px; /* o más si hace falta */
+  padding: 1rem;
+}

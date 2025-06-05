@@ -2,12 +2,20 @@
 
   <!-- SIDENAV -->
   <mat-sidenav #sidenav mode="over" class="sidenav" (closedStart)="opened = false">
-    <a  routerLink="/about-me" (click)="sidenav.close()" routerLinkActive="active">{{ 'ABOUT_ME' | translate }}</a>
-    <a style="display: block;" routerLink="/projects" (click)="sidenav.close()" routerLinkActive="active">{{ 'PROJECTS' | translate }}</a>
-    <a style="display: block;" routerLink="/contact" (click)="sidenav.close()" routerLinkActive="active">{{ 'CONTACT' | translate }}</a>
-    <button (click)="confirmDownload()" class="cv-button">{{ 'DOWNLOAD' | translate}}</button>
-
+    <a routerLink="/about-me" (click)="sidenav.close()" routerLinkActive="active">
+      <i class="fa-solid fa-circle-user"></i> {{ 'ABOUT_ME' | translate }}
+    </a>
+    <a routerLink="/projects" (click)="sidenav.close()" routerLinkActive="active">
+      <i class="fa-solid fa-laptop-code"></i> {{ 'PROJECTS' | translate }}
+    </a>
+    <a routerLink="/contact" (click)="sidenav.close()" routerLinkActive="active">
+      <i class="fa-solid fa-envelope"></i> {{ 'CONTACT' | translate }}
+    </a>
+    <button (click)="confirmDownload()" class="cv-button">
+      <i class="fa-solid fa-file-arrow-down"></i> {{ 'DOWNLOAD' | translate }}
+    </button>
   </mat-sidenav>
+
 
   <!-- MAIN CONTENT -->
   <mat-sidenav-content>
