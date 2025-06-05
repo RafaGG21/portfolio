@@ -14,7 +14,7 @@
 .trabajo-box {
   position: relative;
   height: 400px;
-  border: 2px solid rgba(0, 0, 0, 0.1);
+  border: 2px solid #003366;
   background-color: #f1f5f8;
   border-radius: 1.5rem;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);

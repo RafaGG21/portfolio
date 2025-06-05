@@ -14,7 +14,7 @@
   height: 250px;
   background-color: #f1f5f8;
   border-radius: 1.5rem;
-  border: 2px solid rgba(0, 0, 0, 0.1);
+  border: 2px solid#003366; ;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
   overflow: visible;
   padding-inline: 3rem; /* nuevo: margen visual izquierdo y derecho */
@@ -32,15 +32,13 @@
 
 .trajectory-path {
   fill: none;
-  stroke: #003366;
+  stroke: orange;
   stroke-width: 4;
   stroke-linecap: round;
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
-  animation: drawLine 2s ease forwards;
+  animation: drawLine 2s ease infinite;
 }
-
-
 
 @keyframes drawLine {
   to {
