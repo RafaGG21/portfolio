@@ -26,6 +26,9 @@
     <div class="badges">
       <span *ngFor="let tech of project?.technologies" class="badge">{{ tech }}</span>
       </div>
+      <div style="margin-top: 3rem;">
+        <a [routerLink]="['/projects']">{{'COME_BACK_PROJECTS' | translate}}</a>
+    </div>
   </div>
 </div>
 </div>

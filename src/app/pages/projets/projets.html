@@ -1,7 +1,12 @@
+<div class="header" style="margin-bottom: 2rem; text-align: center;">
+  <i class="fa-solid fa-laptop-code" style="font-size: 2rem;"></i>
+  <h2 class="section-title" style="margin-top: 10px;">{{ 'PROJECTS' | translate }}</h2>
+</div>
+
 <div class="projects-container">
   <div class="project-card" *ngFor="let project of projects">
     <img [src]="project.images[0]" [alt]="project.name" />
     <h3>{{ project.name }}</h3>
-    <a [routerLink]="['/project', project.id]">Ver proyecto</a>
+    <a [routerLink]="['/project', project.id]">{{ 'SEE_PROJECT' | translate }}</a>
   </div>
 </div>

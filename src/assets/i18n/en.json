@@ -31,5 +31,7 @@
     "CONFIRM": "Yes, download",
     "CANCEL": "Cancel"
   },
-  "DOWNLOAD": "Download"
+  "DOWNLOAD": "Download",
+  "SEE_PROJECT": "See the details of the project",
+  "COME_BACK_PROJECTS": "Return to projects"
 }

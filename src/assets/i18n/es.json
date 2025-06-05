@@ -31,7 +31,9 @@
     "CONFIRM": "Sí, descargar",
     "CANCEL": "Cancelar"
   },
-  "DOWNLOAD": "Descargar"
+  "DOWNLOAD": "Descargar",
+  "SEE_PROJECT": "Ver detalles del proyecto",
+  "COME_BACK_PROJECTS": "Volver a proyectos"
 }
 
 
