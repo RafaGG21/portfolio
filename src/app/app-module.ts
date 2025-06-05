@@ -30,6 +30,7 @@ import { Work } from './components/work/work';
 import { Footer } from './components/footer/footer';
 import { Project } from './pages/project/project'
 import { ScrollTechologies } from './components/scroll-techologies/scroll-techologies';
+import { Skills } from './components/skills/skills';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -48,7 +49,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     RevealTextDirective,
     Work,
     Footer,
-    Project
+    Project,
+    Skills
   ],
   imports: [
     MatTooltipModule,

@@ -226,4 +226,8 @@ body.dark-mode .trajectory-box {
   padding-inline: 3rem; /* nuevo: margen visual izquierdo y derecho */
 }
 
-
+body.dark-mode .skill-name {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  color: orange;
+}
