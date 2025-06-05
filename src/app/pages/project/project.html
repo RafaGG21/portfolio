@@ -1,4 +1,5 @@
-<div class="project-container">
+<div class="row project-container">
+  <div class="col-md-8">
   <div class="carousel-container" *ngIf="project?.images?.length">
     <div class="carousel-slide">
       <img [src]="project.images[currentIndex]" />
@@ -11,9 +12,9 @@
       </span>
     </div>
   </div>
+</div>
 
-
-
+<div class="col-md-4">
   <div class="project-info" *ngIf="project">
     <h2>{{ project.name }}</h2>
     <div [ngSwitch]="language">
@@ -26,4 +27,5 @@
       <span *ngFor="let tech of project?.technologies" class="badge">{{ tech }}</span>
       </div>
   </div>
+</div>
 </div>

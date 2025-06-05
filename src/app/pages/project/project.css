@@ -1,10 +1,6 @@
 .project-container {
-  display: flex;
-  gap: 2rem;
   padding: 2rem;
   padding-bottom: 35rem; /* ⬅️ Añade espacio inferior */
-  align-items: flex-start;
-  flex-wrap: wrap;
 }
 
 .carousel {
@@ -45,4 +41,41 @@
 
 .carousel-indicators .active {
   background-color: darkred;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.carousel-indicators span {
+  width: 12px;
+  height: 12px;
+  background-color: #b8a11e;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carousel-indicators span.active {
+  background-color: #ff0000;
 }
