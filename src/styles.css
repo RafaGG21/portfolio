@@ -60,7 +60,8 @@ h2{
   color: #003366 !important; /* modo claro por defecto */
   transition: color 0.3s ease;
 }
-body.dark-mode  h2 {
+body.dark-mode  h2,
+body.dark-mode  i {
   color: orange !important; /* color modo oscuro */
 }
 
@@ -174,4 +175,12 @@ body.dark-mode .scroll-container {
   to {
     transform: translateX(-100%);
   }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; /* Espacio entre icono y título */
+  text-align: center;
 }

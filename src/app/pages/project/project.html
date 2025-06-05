@@ -1,18 +1,14 @@
 <div class="project-container">
-  <div *ngIf="project?.images?.length" id="carouselExampleIndicators"
-  #carousel class="carousel slide" data-ride="carousel" data-interval="1000">
-    <ol class="carousel-indicators">
-      <li *ngFor="let image of project.images; let i = index"
-          [attr.data-target]="'#carouselExampleIndicators'"
-          [attr.data-slide-to]="i"
-          [class.active]="i === 0">
-      </li>
-    </ol>
+  <div class="carousel-container" *ngIf="project?.images?.length">
+    <div class="carousel-slide">
+      <img [src]="project.images[currentIndex]" />
+    </div>
 
-    <div class="carousel-inner">
-      <div class="carousel-item" *ngFor="let image of project.images; let i = index" [class.active]="i === 0">
-        <img class="d-block w-100" [src]="image" alt="Slide {{ i + 1 }}">
-      </div>
+    <div class="carousel-indicators">
+      <span *ngFor="let slide of project.images; index as i"
+            [class.active]="i === currentIndex"
+            (click)="goToSlide(i)">
+      </span>
     </div>
   </div>
 

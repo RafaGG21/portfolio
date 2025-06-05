@@ -12,10 +12,9 @@ import { Carousel } from 'bootstrap';
   templateUrl: './project.html',
   styleUrl: './project.css'
 })
-export class Project implements OnInit, AfterViewInit {
+export class Project implements OnInit {
   project!: IProject;
 
-  @ViewChild('carousel', { static: false }) carousel!: ElementRef;
 
   constructor(private route: ActivatedRoute, private http: HttpClient,
     private themeService: ThemeService, private languageService: LanguageService) {}
@@ -35,22 +34,33 @@ export class Project implements OnInit, AfterViewInit {
     this.languageService.language$.subscribe(value => {
       this.language = value;
     });
+    this.startAutoSlide();
   }
 
-  ngAfterViewInit(): void {
-    const carouselEl = this.carousel.nativeElement;
 
-    const bsCarousel = new Carousel(carouselEl, {
-      interval: 1000,
-      ride: 'carousel',
-      pause: false,
-      wrap: true
-    });
+  currentIndex = 0;
+  intervalId: any;
 
-    setInterval(() => {
-      bsCarousel.next();
-    }, 1000);
+  ngOnDestroy(): void {
+    clearInterval(this.intervalId);
   }
 
+  startAutoSlide(): void {
+    this.intervalId = setInterval(() => {
+      this.nextSlide();
+    }, 2000);
+  }
+
+  nextSlide(): void {
+    this.currentIndex = (this.currentIndex + 1) % this.project.images.length;
+  }
+
+  prevSlide(): void {
+    this.currentIndex = (this.currentIndex - 1 + this.project.images.length) % this.project.images.length;
+  }
+
+  goToSlide(index: number): void {
+    this.currentIndex = index;
+  }
 
 }
