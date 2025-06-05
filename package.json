@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "postbuild": "copy src\\_redirects dist\\portfolio\\_redirects"
   },
   "private": true,
   "dependencies": {
