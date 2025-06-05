@@ -21,7 +21,7 @@
   "JOB_2_TITLE": "Stagiaire",
   "JOB_2_DESC": "Projet pour l'administration publique française. Développement de tests unitaires, corrections de bugs applicatifs.",
   "WORK": "Carrière professionnelle",
-  "EMAIL":"Courriel",
+  "EMAIL_LABEL":"Courriel",
   "ABOUT":"Objet",
   "MESSAGE":"Message",
   "SEND": "Envoyer",
@@ -33,7 +33,20 @@
     "CANCEL": "Annuler"
   },
   "DOWNLOAD": "Télécharger",
+  "GO_REPOSITORY": "Voir le code",
   "SEE_PROJECT": "Voir les details du projet",
   "COME_BACK_PROJECTS": "Revenir sur l'écran de projets",
-  "TECHNOLOGIES": "Technologies"
+  "TECHNOLOGIES": "Technologies",
+  "EMAIL": {
+    "CONFIRM_TITLE": "Envoyer le message ?",
+    "CONFIRM_TEXT": "Êtes-vous sûr de vouloir envoyer cet e-mail ?",
+    "CONFIRM_BUTTON": "Oui, envoyer",
+    "CANCEL_BUTTON": "Annuler",
+    "SUCCESS_TITLE": "Envoyé",
+    "SUCCESS_TEXT": "Votre message a été envoyé avec succès.",
+    "ERROR_TITLE": "Erreur",
+    "ERROR_TEXT": "Le message n'a pas pu être envoyé. Veuillez réessayer ultérieurement.",
+    "INCOMPLETE_TITLE": "Champs incomplets",
+    "INCOMPLETE_TEXT": "Veuillez remplir tous les champs correctement."
+  }
 }

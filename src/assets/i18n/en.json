@@ -21,7 +21,7 @@
   "JOB_2_TITLE": "Internship",
   "JOB_2_DESC": "Project for the French public administration. Unit test development, application bug fixes.",
   "WORK": "Professional career",
-  "EMAIL":"Email",
+  "EMAIL_LABEL":"Email",
   "ABOUT":"Subject",
   "MESSAGE":"Message",
   "SEND": "Send",
@@ -33,7 +33,21 @@
     "CANCEL": "Cancel"
   },
   "DOWNLOAD": "Download",
+  "GO_REPOSITORY": "See the code",
   "SEE_PROJECT": "See the details of the project",
   "COME_BACK_PROJECTS": "Return to projects",
-  "TECHNOLOGIES": "Technologies"
+  "TECHNOLOGIES": "Technologies",
+  "EMAIL": {
+  "CONFIRM_TITLE": "Send message?",
+  "CONFIRM_TEXT": "Are you sure you want to send this email?",
+  "CONFIRM_BUTTON": "Yes, send",
+  "CANCEL_BUTTON": "Cancel",
+  "SUCCESS_TITLE": "Sent",
+  "SUCCESS_TEXT": "Your message has been sent successfully.",
+  "ERROR_TITLE": "Error",
+  "ERROR_TEXT": "The message could not be sent. Please try again later.",
+  "INCOMPLETE_TITLE": "Incomplete fields",
+  "INCOMPLETE_TEXT": "Please complete all fields correctly."
+  }
+
 }

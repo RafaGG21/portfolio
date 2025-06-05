@@ -28,6 +28,60 @@ export class Contact {
 
   sendEmail() {
     if (this.contactForm.valid) {
+      // Obtener las traducciones
+      const confirmTitle = this.translate.instant('EMAIL.CONFIRM_TITLE');
+      const confirmText = this.translate.instant('EMAIL.CONFIRM_TEXT');
+      const confirmButton = this.translate.instant('EMAIL.CONFIRM_BUTTON');
+      const cancelButton = this.translate.instant('EMAIL.CANCEL_BUTTON');
+      const successTitle = this.translate.instant('EMAIL.SUCCESS_TITLE');
+      const successText = this.translate.instant('EMAIL.SUCCESS_TEXT');
+      const errorTitle = this.translate.instant('EMAIL.ERROR_TITLE');
+      const errorText = this.translate.instant('EMAIL.ERROR_TEXT');
+      const incompleteTitle = this.translate.instant('EMAIL.INCOMPLETE_TITLE');
+      const incompleteText = this.translate.instant('EMAIL.INCOMPLETE_TEXT');
+
+      Swal.fire({
+        title: confirmTitle,
+        text: confirmText,
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#4caf50',
+        cancelButtonColor: '#f44336',
+        confirmButtonText: confirmButton,
+        cancelButtonText: cancelButton
+      }).then((result) => {
+        if (result.isConfirmed) {
+          const formData = this.contactForm.value;
+
+          emailjs.send(
+            environment.emailjs.serviceId,
+            environment.emailjs.templateId,
+            {
+              from_name: formData.email,
+              subject: formData.subject,
+              message: formData.message,
+              reply_to: formData.email,
+            },
+            environment.emailjs.publicKey
+          )
+          .then(() => {
+            Swal.fire(successTitle, successText, 'success');
+            this.contactForm.reset();
+          })
+          .catch(err => {
+            console.error('Error al enviar el correo:', err);
+            Swal.fire(errorTitle, errorText, 'error');
+          });
+        }
+      });
+    } else {
+      const incompleteTitle = this.translate.instant('EMAIL.INCOMPLETE_TITLE');
+      const incompleteText = this.translate.instant('EMAIL.INCOMPLETE_TEXT');
+      Swal.fire(incompleteTitle, incompleteText, 'warning');
+    }
+  }
+  send2Email() {
+    if (this.contactForm.valid) {
       Swal.fire({
         title: '¿Enviar mensaje?',
         text: '¿Estás seguro de que deseas enviar este correo?',

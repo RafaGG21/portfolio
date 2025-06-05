@@ -2,7 +2,7 @@
   <h2>{{'CONTACT' | translate}}</h2>
 
   <form [formGroup]="contactForm" (ngSubmit)="sendEmail()">
-    <label for="email">{{'EMAIL' | translate}}</label>
+    <label for="email">{{'EMAIL_LABEL' | translate}}</label>
     <input id="email" type="email" formControlName="email" required />
 
     <label for="subject">{{'ABOUT' | translate}}</label>

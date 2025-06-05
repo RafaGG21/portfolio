@@ -21,7 +21,7 @@
   "JOB_1_DESC": "Proyecto para la administración pública francesa. Tecnologías: Java 8, Spring, Angular, JSF, Primefaces, SQL, Sonarqube y Jenkins. Metodología Scrum. Jira y Confluence.",
   "JOB_2_TITLE": "Estudiante en prácticas",
   "JOB_2_DESC": "Proyecto para la administración pública francesa. Desarrollo de pruebas unitarias y corrección de errores de la aplicación.",
-  "EMAIL":"Correo electrónico",
+  "EMAIL_LABEL":"Correo electrónico",
   "ABOUT":"Asunto",
   "MESSAGE":"Mensaje",
   "SEND": "Enviar",
@@ -33,9 +33,23 @@
     "CANCEL": "Cancelar"
   },
   "DOWNLOAD": "Descargar",
+  "GO_REPOSITORY": "Ver el codigo",
   "SEE_PROJECT": "Ver detalles del proyecto",
   "COME_BACK_PROJECTS": "Volver a proyectos",
-  "TECHNOLOGIES": "Tecnologías"
+  "TECHNOLOGIES": "Tecnologías",
+  "EMAIL": {
+  "CONFIRM_TITLE": "¿Enviar mensaje?",
+  "CONFIRM_TEXT": "¿Estás seguro de que deseas enviar este correo?",
+  "CONFIRM_BUTTON": "Sí, enviar",
+  "CANCEL_BUTTON": "Cancelar",
+  "SUCCESS_TITLE": "Enviado",
+  "SUCCESS_TEXT": "Tu mensaje ha sido enviado correctamente.",
+  "ERROR_TITLE": "Error",
+  "ERROR_TEXT": "No se pudo enviar el mensaje. Inténtalo más tarde.",
+  "INCOMPLETE_TITLE": "Campos incompletos",
+  "INCOMPLETE_TEXT": "Por favor, completa todos los campos correctamente."
+}
+
 }
 
 
