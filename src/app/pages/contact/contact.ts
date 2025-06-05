@@ -24,6 +24,9 @@ export class Contact {
       subject: ['', Validators.required],
       message: ['', Validators.required],
     });
+    this.themeService.darkMode$.subscribe(value => {
+      this.darkMode = value;
+    });
   }
 
   sendEmail() {

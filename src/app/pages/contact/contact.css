@@ -62,3 +62,44 @@ form button:disabled {
   transform: none;
 }
 
+
+
+.social-container {
+  border: 2px solid #003366;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.1rem;
+  background-color: #f9f9f9;
+  color: #000;
+  max-width: 300px;
+  transition: all 0.3s ease;
+}
+
+.social-container a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-container a:hover {
+  color: #ff6600;
+}
+
+/* Dark mode class */
+.dark .social-container {
+  border-color: orange;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.data-contact{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
