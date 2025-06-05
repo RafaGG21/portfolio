@@ -13,7 +13,7 @@ export class Skills {
     { name: 'Java', level: 70 },
     { name: 'Spring', level: 70 },
     { name: 'React', level: 40 },
-    { name: 'Javascript', level: 40 },
+    { name: 'Javascript', level: 60 },
     { name: 'Python', level: 40 },
     { name: 'NodeJS', level: 40 },
     { name: 'HTML/CSS', level: 70 },
