@@ -2,7 +2,7 @@
 
   <!-- SIDENAV -->
   <mat-sidenav #sidenav mode="over" class="sidenav" (closedStart)="opened = false">
-    <a style="display: block;" routerLink="/about-me" (click)="sidenav.close()" routerLinkActive="active">{{ 'ABOUT_ME' | translate }}</a>
+    <a  routerLink="/about-me" (click)="sidenav.close()" routerLinkActive="active">{{ 'ABOUT_ME' | translate }}</a>
     <a style="display: block;" routerLink="/projects" (click)="sidenav.close()" routerLinkActive="active">{{ 'PROJECTS' | translate }}</a>
     <a style="display: block;" routerLink="/contact" (click)="sidenav.close()" routerLinkActive="active">{{ 'CONTACT' | translate }}</a>
     <button (click)="confirmDownload()" class="cv-button">{{ 'DOWNLOAD' | translate}}</button>

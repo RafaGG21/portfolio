@@ -106,3 +106,72 @@ body.dark-mode  .project-info{
 body.dark-mode  .project-info h2{
   color: #f2f4f7 !important; /* color modo oscuro */
 }
+
+.scroll-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background: repeating-linear-gradient(
+    45deg, /* dirección diagonal de izquierda a derecha */
+    #ffffff,
+    #ffffff 10px,
+    oklch(96.7% 0.003 264.542) 10px,
+    oklch(96.7% 0.003 264.542) 20px
+  );
+  padding: 1rem 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+
+  color: #333;
+}
+
+
+body.dark-mode .scroll-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background: repeating-linear-gradient(
+    45deg, /* dirección diagonal de izquierda a derecha */
+    #0f172a,
+    #0f172a 10px,
+    black 10px,
+    black 20px
+  );
+  padding: 1rem 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+
+  color: orange !important;
+}
+.scroll-content {
+  display: inline-block;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.scroll-right .scroll-content {
+  animation-name: scrollRight;
+}
+
+.scroll-left .scroll-content {
+  animation-name: scrollLeft;
+}
+
+@keyframes scrollRight {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes scrollLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

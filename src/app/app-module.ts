@@ -29,6 +29,7 @@ import { RevealTextDirective } from './directives/reveal-text';
 import { Work } from './components/work/work';
 import { Footer } from './components/footer/footer';
 import { Project } from './pages/project/project'
+import { ScrollTechologies } from './components/scroll-techologies/scroll-techologies';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -43,6 +44,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     Career,
     Contact,
     PopupDescription,
+    ScrollTechologies,
     RevealTextDirective,
     Work,
     Footer,
