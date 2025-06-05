@@ -15,12 +15,19 @@ export class Career implements AfterViewInit {
   constructor(private dialog: MatDialog, private translate: TranslateService) {}
 
   ngAfterViewInit(): void {
+    const path = this.trajectoryBox.nativeElement.querySelector('.trajectory-path');
+
     const observer = new IntersectionObserver(
       ([entry]) => {
-        const path = this.trajectoryBox.nativeElement.querySelector('.trajectory-path');
         if (entry.isIntersecting && path) {
-          path.classList.add('animate-path');
-          observer.disconnect();
+          // Reiniciar animación usando requestAnimationFrame para asegurar el reflow
+          path.classList.remove('animate-path');
+
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              path.classList.add('animate-path');
+            });
+          });
         }
       },
       { threshold: 0.3 }

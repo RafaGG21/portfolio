@@ -2,9 +2,9 @@ import {
   Directive,
   ElementRef,
   Input,
+  Renderer2,
   OnInit,
-  OnDestroy,
-  Renderer2
+  OnDestroy
 } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
@@ -16,8 +16,11 @@ import { Subscription } from 'rxjs';
 export class RevealTextDirective implements OnInit, OnDestroy {
   @Input('appRevealText') translationKey: string = '';
   @Input() delay: number = 40;
+
+  private observer!: IntersectionObserver;
   private intervalId: any;
   private sub: Subscription | null = null;
+  private lastText: string = '';
 
   constructor(
     private el: ElementRef,
@@ -28,23 +31,42 @@ export class RevealTextDirective implements OnInit, OnDestroy {
   ngOnInit(): void {
     if (!this.translationKey) return;
 
+    // Suscribirse a cambios de idioma
     this.sub = this.translate.get(this.translationKey).subscribe(translated => {
-      this.revealText(translated);
+      this.lastText = translated;
+      this.setupObserver();
     });
 
-    // Escucha cambios de idioma
     this.translate.onLangChange.subscribe(() => {
-      this.reset();
       this.translate.get(this.translationKey).subscribe(translated => {
+        this.lastText = translated;
         this.revealText(translated);
       });
     });
   }
 
+  setupObserver() {
+    this.observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            this.revealText(this.lastText);
+          }
+        });
+      },
+      {
+        threshold: 0.5 // El 50% del elemento debe ser visible
+      }
+    );
+
+    this.observer.observe(this.el.nativeElement);
+  }
+
   revealText(text: string) {
+    this.reset();
+
     let index = 0;
     const length = text.length;
-    this.renderer.setProperty(this.el.nativeElement, 'textContent', '');
 
     this.intervalId = setInterval(() => {
       if (index < length) {
@@ -66,7 +88,10 @@ export class RevealTextDirective implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    clearInterval(this.intervalId);
+    this.reset();
     this.sub?.unsubscribe();
+    if (this.observer) {
+      this.observer.disconnect();
+    }
   }
 }

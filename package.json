@@ -26,6 +26,7 @@
     "portfolio": "file:",
     "rxjs": "~7.8.0",
     "sweetalert2": "^11.22.0",
+    "swiper": "^11.2.8",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },
@@ -33,6 +34,7 @@
     "@angular/build": "^20.0.0",
     "@angular/cli": "^20.0.0",
     "@angular/compiler-cli": "^20.0.0",
+    "@types/bootstrap": "^5.2.10",
     "@types/jasmine": "~5.1.0",
     "@types/jquery": "^3.5.32",
     "jasmine-core": "~5.7.0",

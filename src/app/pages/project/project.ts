@@ -1,12 +1,10 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit, AfterViewInit  } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef  } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { IProject } from '../../interfaces/project.interface';
-import $ from 'jquery';
 import { ThemeService } from '../../services/themeservice';
 import { LanguageService } from '../../services/language-service';
-
-
+import { Carousel } from 'bootstrap';
 
 @Component({
   selector: 'project',
@@ -14,8 +12,10 @@ import { LanguageService } from '../../services/language-service';
   templateUrl: './project.html',
   styleUrl: './project.css'
 })
-export class Project implements OnInit {
+export class Project implements OnInit, AfterViewInit {
   project!: IProject;
+
+  @ViewChild('carousel', { static: false }) carousel!: ElementRef;
 
   constructor(private route: ActivatedRoute, private http: HttpClient,
     private themeService: ThemeService, private languageService: LanguageService) {}
@@ -36,5 +36,21 @@ export class Project implements OnInit {
       this.language = value;
     });
   }
+
+  ngAfterViewInit(): void {
+    const carouselEl = this.carousel.nativeElement;
+
+    const bsCarousel = new Carousel(carouselEl, {
+      interval: 1000,
+      ride: 'carousel',
+      pause: false,
+      wrap: true
+    });
+
+    setInterval(() => {
+      bsCarousel.next();
+    }, 1000);
+  }
+
 
 }
