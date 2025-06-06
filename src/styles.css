@@ -89,6 +89,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 body.dark-mode  .contact-container{
   color: orange !important; /* color modo oscuro */
   border: 2px solid orange !important;
+  background: linear-gradient(to bottom, #0f172a, #0a0f1f);
 }
 
 body.dark-mode  .project-info{
