@@ -7,7 +7,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 body.dark-mode {
-  background: linear-gradient(to bottom, #0b0c0c, #0a0f1f);
+  background: black;
   color: #f8fafc;
 }
 
@@ -211,7 +211,7 @@ body.dark-mode .trajectory-box {
   background: linear-gradient(to bottom, #0b0c0c, #0a0f1f);
   color: #f8fafc;
   border-radius: 1.5rem;
-  border: 2px solid rgba(0, 0, 0, 0.1);
+  border: 2px solid orange;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
   overflow: visible;
   padding-inline: 3rem; /* nuevo: margen visual izquierdo y derecho */
