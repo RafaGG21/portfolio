@@ -18,7 +18,7 @@
   "STUDIES_TITLE": "Estudios",
   "WORK": "Carrera profesional",
   "JOB_1_TITLE": "Desarrollador de software en Inetum",
-  "JOB_1_DESC": "Proyecto para la administración pública francesa. Tecnologías: Java 8, Spring, Angular, JSF, Primefaces, SQL, Sonarqube y Jenkins. Metodología Scrum. Jira y Confluence.",
+  "JOB_1_DESC": "Proyecto para la administración pública francesa. Tecnologías: Java 8, Spring, Angular, JSF, Primefaces, SQL, Sonarqube y Jenkins. ",
   "JOB_2_TITLE": "Estudiante en prácticas",
   "JOB_2_DESC": "Proyecto para la administración pública francesa. Desarrollo de pruebas unitarias y corrección de errores de la aplicación.",
   "EMAIL_LABEL":"Correo electrónico",
