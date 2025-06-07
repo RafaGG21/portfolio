@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Trivial Harry Potter",
     "images": ["assets/pictures/trivial/trivial_1.png", "assets/pictures/trivial/trivial_2.png",
-    "assets/pictures/trivial/trivial_3.png","assets/pictures/trivial/trivial_4.png", "assets/pictures/trivial/trivial_5.png"],
+    "assets/pictures/trivial/trivial_3.png","assets/pictures/trivial/trivial_4.png"],
     "description_es": "Este programa consiste en un trivial sobre la saga de libros y películas Harry Potter. El jugador/a podrá elegir las preguntas de un libro y se presentarán aleatoriamente. El jugador tiene un periodo de tiempo para contestar. Si el jugador contesta, pasa a la siguiente pregunta. De lo contrario, el jugador pierde.",
     "description_en": "This project is a trivia game about the Harry Potter book and film series. Players can choose questions from a book, and they will be presented randomly. They have a set amount of time to answer. If they answer correctly, they move on to the next question. Otherwise, he/she loses.",
     "description_fr": "Ce projet est un jeu-questionnaire sur la saga Harry Potter. Les joueurs peuvent choisir des questions tirées d'un livre et présentées aléatoirement. Ils disposent d'un temps limité pour répondre. Si la réponse est correcte, ils passent à la question suivante. Sinon, ils perdent.",
