@@ -16,9 +16,9 @@
     "name": "Podbuster",
     "images": ["assets/pictures/podbuster/podbuster_1.png", "assets/pictures/podbuster/podbuster_2.png",
     "assets/pictures/podbuster/podbuster_3.png","assets/pictures/podbuster/podbuster_4.png", "assets/pictures/podbuster/podbuster_5.png"],
-    "description_es": "Este proyecto consiste en una aplicación de música en la cual el usuario puede registrarse, iniciar sesión, añadir podcast, eliminarlos y buscarlos por autor, género y titulo.",
-    "description_en": "This project consists of a music application in which the user can register, log in, add podcasts, delete them, and search for them by author, genre, and title.",
-    "description_fr": "Ce projet consiste en une application musicale dans laquelle l'utilisateur peut s'inscrire, se connecter, ajouter des podcasts, les supprimer et les rechercher par auteur, genre et titre.",
+    "description_es": "Este proyecto consiste en una aplicación de música en la cual el usuario puede registrarse, iniciar sesión, añadir podcast, eliminarlos y buscarlos por autor, género y titulo. Este proyecto ha sido realizado en grupo para el curso de Fullstack DevOps. ",
+    "description_en": "This project consists of a music application in which the user can register, log in, add podcasts, delete them, and search for them by author, genre, and title.This project was carried out in a group for the Fullstack DevOps course.",
+    "description_fr": "Ce projet consiste en une application musicale dans laquelle l'utilisateur peut s'inscrire, se connecter, ajouter des podcasts, les supprimer et les rechercher par auteur, genre et titre. Ce projet a été fait en groupe pour le cours Fullstack DevOps.",
     "technologies": ["React", "NodeJS", "Docker", "MongoDB", "HTML","CSS"],
     "repositories":  [{ "name" : "backend", "link": "https://github.com/fullstacktf/podcast-library-backend"}, {"name" : "frontend", "link":"https://github.com/fullstacktf/podcast-library-frontend" }]
   },
