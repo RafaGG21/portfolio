@@ -32,5 +32,16 @@
     "description_fr": "Ce projet est une boutique d'informatique et d'accessoires. Les utilisateurs peuvent s'inscrire et se connecter. Ils peuvent également rechercher des articles par nom et par type, ajouter des produits à leur panier et payer via PayPal. L'administrateur peut également gérer les ventes et ajouter, supprimer ou modifier des produits.",
     "technologies": ["Angular", "NodeJS", "Docker", "MongoDB", "HTML","CSS", "Typescript"],
     "repositories":  [{ "name" : "backend", "link": "https://github.com/RafaGG21/tienda-backend"}, {"name" : "frontend", "link":"https://github.com/RafaGG21/tienda-frontend" }]
+  },
+  {
+    "id": 4,
+    "name": "Majestic",
+   "images": ["assets/pictures/majestic/majestic_1.png", "assets/pictures/majestic/majestic_2.png",
+    "assets/pictures/majestic/majestic_3.png","assets/pictures/majestic/majestic_4.png", "assets/pictures/majestic/majestic_5.png", "assets/pictures/majestic/majestic_6.png", "assets/pictures/majestic/majestic_7.png","assets/pictures/majestic/majestic_8.png"],
+    "description_es":"Este proyecto es una tienda de compra y venta de ropa y complementos para que los usuarios ganen dinero con las prendas que no necesiten. El usuario puede buscar artículos por nombre y tipo. Además el usuario puede contactar con el vendedor a través de un chat, para así llegar a un acuerdo. Además el usuario puede registrarse, loguearse y cambiar su información de usuario. Por último, el usuario puede agregar, eliminar y editar productos.",
+    "description_en":"This project is a clothing and accessories buying and selling store where users can earn money with their unwanted items. Users can search for items by name and type. Users can also contact the seller via chat to reach an agreement. Users can also register, log in, and change their user information. Finally, users can add, delete, and edit products.",
+    "description_fr":"Ce projet est une boutique d'achat et de vente de vêtements et d'accessoires où les utilisateurs peuvent gagner de l'argent avec leurs articles non désirés. Ils peuvent rechercher des articles par nom et par type. Ils peuvent également contacter le vendeur par chat pour trouver un accord. Ils peuvent également s'inscrire, se connecter et modifier leurs informations. Enfin, ils peuvent ajouter, supprimer et modifier des produits.",
+    "technologies": ["Angular", "Spring", "Microservices", "MySQL", "HTML","CSS", "Typescript"],
+    "repositories":  [{ "name" : "backend", "link": "https://github.com/RafaGG21/microservicios-productos"}, {"name" : "frontend", "link":"https://github.com/RafaGG21/frontend-microservicios-productos" }]
   }
 ]
