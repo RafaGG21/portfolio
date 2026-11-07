@@ -45,4 +45,5 @@
     "technologies": ["Angular", "Spring", "Microservices", "MySQL", "HTML","CSS", "Typescript"],
     "repositories":  [{ "name" : "backend", "link": "https://github.com/RafaGG21/microservicios-productos"}, {"name" : "frontend", "link":"https://github.com/RafaGG21/frontend-microservicios-productos" }]
   }
+  
 ]
