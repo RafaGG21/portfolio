@@ -2,14 +2,14 @@
   {
     "id": 1,
     "name": "Nikatalks",
-    "images": ["assets/pictures/trivial/nikatalks_1.png", "assets/pictures/trivial/nikatalks_2.png",
-    "assets/pictures/trivial/nikatalks_3.png","assets/pictures/trivial/nikatalks_4.png",
-    "assets/pictures/trivial/nikatalks_5.png","assets/pictures/trivial/nikatalks_6.png"],
+    "images": ["assets/pictures/nikatalks/nikatalks_1.png", "assets/pictures/nikatalks/nikatalks_2.png",
+    "assets/pictures/nikatalks/nikatalks_3.png","assets/pictures/nikatalks/nikatalks_4.png",
+    "assets/pictures/nikatalks/nikatalks_5.png","assets/pictures/nikatalks/nikatalks_6.png"],
     "description_es": "Aplicación web que conecta a alumnos con profesores de idiomas. Los alumnos reservan clases particulares en un calendario interactivo, las pagan online con Stripe y pueden suscribirse a planes recurrentes. Alumno y profesor hablan por un chat en tiempo real con WebSockets (STOMP/SockJS). La plataforma incluye una biblioteca de recursos didácticos que se puede filtrar por idioma, nivel y competencia. Los profesores tienen su propio panel para subir y gestionar archivos y para publicar lecciones con un editor de texto enriquecido. El login funciona con email o Google mediante Firebase Authentication, con roles (alumno/profesor) y rutas protegidas. Los archivos se guardan en Firebase Storage. La interfaz está en español, inglés, francés y ruso.",
     "description_en": "A web app that connects language students with teachers. Students book private lessons on an interactive calendar, pay online with Stripe and can subscribe to recurring plans. Students and teachers talk through a real-time chat built on WebSockets (STOMP/SockJS). The platform includes a library of learning resources that can be filtered by language, level and skill. Teachers have their own dashboard to upload and manage files and to publish lessons with a rich text editor. Users log in with email or Google through Firebase Authentication, with roles (student/teacher) and protected routes. Files are stored in Firebase Storage. The interface is available in Spanish, English, French and Russian.",
     "description_fr": "Application web qui met en relation des élèves avec des professeurs de langues. Les élèves réservent des cours particuliers sur un calendrier interactif, les paient en ligne avec Stripe et peuvent souscrire à des abonnements récurrents. Élèves et professeurs échangent par un chat en temps réel basé sur les WebSockets (STOMP/SockJS). La plateforme propose une bibliothèque de ressources pédagogiques filtrables par langue, niveau et compétence. Les professeurs ont leur propre tableau de bord pour mettre en ligne et gérer des fichiers et pour publier des leçons avec un éditeur de texte enrichi. La connexion se fait par email ou par Google via Firebase Authentication, avec des rôles (élève/professeur) et des routes protégées. Les fichiers sont stockés dans Firebase Storage. L'interface est disponible en espagnol, anglais, français et russe.",
     "technologies": ["Angular", "Java", "Spring", "Microservices","Typescript", "HTML","CSS", "MySQL", "Docker"],
-    "repositories":  [{ "name" : "backend / frontend", "link": "https://github.com/RafaGG21/Trivial-Harry-Potter"}]
+    "repositories":  [{ "name" : "backend / frontend", "link": "https://github.com/RafaGG21/nikatalks-Harry-Potter"}]
 
   },
   {
