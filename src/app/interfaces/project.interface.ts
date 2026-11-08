@@ -6,5 +6,6 @@ export interface IProject {
   description_es: string;
   description_en: string,
   description_fr: string;
+  description_de: string;
   repositories: any;
 }

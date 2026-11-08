@@ -23,7 +23,8 @@ export class App implements OnInit {
   languages = [
     { code: 'es', name: 'Español', flag: 'assets/flags/es.png' },
     { code: 'en', name: 'English', flag: 'assets/flags/uk.png' },
-    { code: 'fr', name: 'Français', flag: 'assets/flags/fr.png' }
+    { code: 'fr', name: 'Français', flag: 'assets/flags/fr.png' },
+    { code: 'de', name: 'Deutsch', flag: 'assets/flags/de.png' }
   ];
 
   constructor(private translate: TranslateService, private router: Router,
@@ -118,7 +119,7 @@ export class App implements OnInit {
 
   downloadCV() {
     const lang = this.translate.currentLang || 'es';
-    const fileName = lang === 'fr' ? 'Rafael Gandolfo Garcia CV français.pdf' : lang === 'en' ?
+    const fileName = lang === 'fr' ? 'Rafael Gandolfo Garcia CV français.pdf' : (lang === 'en' || lang === 'de') ?
     'Rafael Gandolfo Garcia CV english.pdf' : 'Rafael Gandolfo Garcia CV español.pdf';
     const link = document.createElement('a');
     link.href = `assets/cv/${fileName}`;
