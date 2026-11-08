@@ -88,6 +88,10 @@
   font-size: 1rem;
 }
 
+.description + .description {
+  margin-top: 0.6rem;
+}
+
 .description {
   font-size: 0.9rem;
   color: var(--text-color);
