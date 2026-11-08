@@ -19,7 +19,7 @@ export class App implements OnInit {
 
   loading = false;
 
-  selectedLanguage = 'es';
+  selectedLanguage = localStorage.getItem('language') || 'es';
   languages = [
     { code: 'es', name: 'Español', flag: 'assets/flags/es.png' },
     { code: 'en', name: 'English', flag: 'assets/flags/uk.png' },
@@ -30,9 +30,33 @@ export class App implements OnInit {
   constructor(private translate: TranslateService, private router: Router,
     private themeService: ThemeService, private languageService: LanguageService
   ) {
-    translate.setDefaultLang(this.selectedLanguage);
+    // Idioma guardado (solo si es uno de los disponibles)
+    const savedLang = this.readStorage('language');
+    if (savedLang && this.languages.some(l => l.code === savedLang)) {
+      this.selectedLanguage = savedLang;
+    }
+    translate.setDefaultLang('es');
     translate.use(this.selectedLanguage);
     this.languageService.setLanguage(this.selectedLanguage);
+
+    // Tema guardado
+    this.applyTheme(this.readStorage('theme') === 'dark');
+  }
+
+  private readStorage(key: string): string | null {
+    try {
+      return localStorage.getItem(key);
+    } catch {
+      return null;
+    }
+  }
+
+  private writeStorage(key: string, value: string): void {
+    try {
+      localStorage.setItem(key, value);
+    } catch {
+      // localStorage no disponible (modo privado, bloqueado...): se ignora
+    }
   }
 
   ngOnInit(): void {
@@ -66,6 +90,7 @@ export class App implements OnInit {
       this.showLanguageToast();
     });
     this.languageService.setLanguage(langCode);
+    this.writeStorage('language', langCode);
   }
 
   private showLanguageToast() {
@@ -86,16 +111,15 @@ export class App implements OnInit {
   }
 
   toggleDarkMode() {
-    this.darkMode = !this.darkMode;
+    this.applyTheme(!this.darkMode);
+    this.writeStorage('theme', this.darkMode ? 'dark' : 'light');
+  }
 
-    if (this.darkMode) {
-      document.body.classList.add('dark-mode');
-      document.body.classList.remove('light-mode');
-    } else {
-      document.body.classList.add('light-mode');
-      document.body.classList.remove('dark-mode');
-    }
-    this.themeService.setDarkMode(this.darkMode);
+  private applyTheme(dark: boolean) {
+    this.darkMode = dark;
+    document.body.classList.toggle('dark-mode', dark);
+    document.body.classList.toggle('light-mode', !dark);
+    this.themeService.setDarkMode(dark);
   }
 
   confirmDownload() {
