@@ -31,6 +31,7 @@ import { Footer } from './components/footer/footer';
 import { Project } from './pages/project/project'
 import { ScrollTechologies } from './components/scroll-techologies/scroll-techologies';
 import { Skills } from './components/skills/skills';
+import { HomeVideoComponent } from './components/home-video/home-video.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -53,6 +54,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     Skills
   ],
   imports: [
+    HomeVideoComponent,
     MatTooltipModule,
     MatProgressBarModule,
     MatProgressSpinnerModule,

@@ -61,9 +61,22 @@ export class App implements OnInit {
   changeLanguage(langCode: string) {
     this.selectedLanguage = langCode;
     this.dropdownOpen = false;
-    this.translate.use(langCode);
+    this.translate.use(langCode).subscribe(() => {
+      this.showLanguageToast();
+    });
     this.languageService.setLanguage(langCode);
-    //console.log(langCode)
+  }
+
+  private showLanguageToast() {
+    Swal.fire({
+      toast: true,
+      position: 'top',
+      icon: 'success',
+      title: this.translate.instant('LANGUAGE_CHANGED'),
+      showConfirmButton: false,
+      timer: 2000,
+      timerProgressBar: true
+    });
   }
 
   getLanguageName(code: string): string {
